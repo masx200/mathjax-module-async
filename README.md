@@ -1,7 +1,8 @@
 # mathjax-module-async
 
 #### 介绍
-把mathjax转化成模块形式异步加载导出,并且不会污染全局变量
+
+把 mathjax 转化成模块形式异步加载导出,并且不会污染全局变量
 
 支持输入:asciimath,latex,mathml
 
@@ -13,13 +14,24 @@
 
 ```powershell
 
-yarn add @masx200/mathjax-module-async
+yarn add "@masx200/mathjax-module-async"
 ```
 
 #### 使用说明
 
-
 ```js
-import "@masx200/mathjax-module-async/lib/index.css"
-import { rendermathml, renderasciimath, renderlatex } from "@masx200/mathjax-module-async";
+import "@masx200/mathjax-module-async/lib/index.css";
+import {
+  rendermathml,
+  renderasciimath,
+  renderlatex,
+} from "@masx200/mathjax-module-async";
 ```
+
+# API
+
+## rendermathml
+
+## renderasciimath
+
+## renderlatex
