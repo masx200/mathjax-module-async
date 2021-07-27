@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "format": " npx prettier --write */*.html */*.js */*.css *.json *.md",
+    "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md",
     "start": " npx @masx200/serve-cli "
   },
   "keywords": [],

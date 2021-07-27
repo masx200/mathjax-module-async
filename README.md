@@ -36,6 +36,10 @@ import {
 
 # API
 
+类型声明文件
+
+https://github.com/masx200/mathjax-module-async/blob/master/lib/index.d.ts
+
 ## rendermathml
 
 ```ts
