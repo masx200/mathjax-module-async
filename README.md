@@ -10,6 +10,10 @@
 
 导出三个方法,把输入的数学公式,渲染成元素,添加到容器中
 
+在线演示
+
+https://masx200.github.io/mathjax-module-async/test/
+
 #### 安装教程
 
 ```powershell
