@@ -41,24 +41,12 @@ https://github.com/masx200/mathjax-module-async/blob/master/lib/index.d.ts
 
 ## rendermathml
 
-```ts
-function rendermathml(input: string, container: HTMLElement): void;
-```
-
 把输入的 mathml 格式的文字渲染到元素，并添加到容器中
 
 ## renderasciimath
 
-```ts
-function renderasciimath(input: string, container: HTMLElement): void;
-```
-
 把输入的 asciimath 格式的文字渲染到元素，并添加到容器中
 
 ## renderlatex
-
-```ts
-function renderlatex(input: string, container: HTMLElement): void;
-```
 
 把输入的 latex 格式的文字渲染到元素，并添加到容器中
