@@ -1,17 +1,17 @@
 {
-    "name": "@masx200/mathjax-module-async",
-    "version": "1.0.0",
-    "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
-    "main": "lib/index.js",
-    "scripts": {
-        "format": " npx prettier --write */*.html */*.js */*.css *.json",
-        "start": " npx @masx200/serve-cli "
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@masx200/serve-cli": "^1.1.6",
-        "prettier": "^2.3.2"
-    }
+  "name": "@masx200/mathjax-module-async",
+  "version": "1.0.0",
+  "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
+  "main": "lib/index.js",
+  "scripts": {
+    "format": " npx prettier --write */*.html */*.js */*.css *.json",
+    "start": " npx @masx200/serve-cli "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@masx200/serve-cli": "^1.1.6",
+    "prettier": "^2.3.2"
+  }
 }
