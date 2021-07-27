@@ -1,4 +1,4 @@
-const output = Object.assign(
+ const container = Object.assign(
     document.body.appendChild(document.createElement("div")),
     { id: "container" }
 );
@@ -7,8 +7,10 @@ import { latexinput } from "./latexinput.js";
 import { mathmlinput } from "./mathmlinput.js";
 import { asciimathinput } from "./asciimathinput.js";
 async function start() {
-    await renderasciimath(asciimathinput, output);
-    await renderlatex(latexinput, output);
-    await rendermathml(mathmlinput, output);
+    await Promise.all([
+        renderasciimath(asciimathinput, container),
+        renderlatex(latexinput, container),
+        rendermathml(mathmlinput, container),
+    ]);
 }
 start();
