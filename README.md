@@ -26,7 +26,6 @@ yarn add "@masx200/mathjax-module-async"
 #### 使用说明
 
 ```js
-import "@masx200/mathjax-module-async/lib/index.css";
 import {
     rendermathml,
     renderasciimath,
