@@ -12,6 +12,22 @@
 
 不会在加载时自动渲染文档中所有公式
 
+基于 MathJax 版本 3.2.0
+
+加载了以下模块:
+
+```json
+[
+    "startup",
+    "core",
+    "input/asciimath",
+    "output/chtml",
+    "input/tex-full",
+    "input/mml",
+    "output/chtml/fonts/tex"
+]
+```
+
 由于使用了`Proxy`,所以支持的浏览器必须支持 ES2015
 
 # 在线演示
@@ -44,15 +60,15 @@ https://github.com/masx200/mathjax-module-async/blob/master/lib/index.d.ts
 
 ## rendermathml
 
-把输入的 mathml 格式的文字渲染到元素，并添加到容器中
+异步方法,把输入的 mathml 格式的文字渲染到元素，并添加到容器中
 
 ## renderasciimath
 
-把输入的 asciimath 格式的文字渲染到元素，并添加到容器中
+异步方法,把输入的 asciimath 格式的文字渲染到元素，并添加到容器中
 
 ## renderlatex
 
-把输入的 latex 格式的文字渲染到元素，并添加到容器中
+异步方法,把输入的 latex 格式的文字渲染到元素，并添加到容器中
 
 ## initmathjax
 
