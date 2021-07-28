@@ -1,7 +1,7 @@
 import { fetchsource } from "./fetchsource";
 import { scriptstoload } from "./scriptstoload";
 
-export async function loadmodules() {
+export async function loadmodules(): Promise<Record<string, any>> {
     const scriptscontent = await Promise.all(
         scriptstoload.map((u) => fetchsource(u))
     );
@@ -10,7 +10,7 @@ export async function loadmodules() {
     const scriptbody = scriptscontent.join("\n;\n");
     // console.log(scriptbody);
 
-    let MathJax: any;
+    let MathJax: Record<string, any> = {};
 
     const global = new Proxy(
         {

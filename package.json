@@ -6,9 +6,9 @@
     "name": "@masx200/mathjax-module-async",
     "version": "1.0.1",
     "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
-    "main": "lib/index.cjs",
-    "module": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "build": " npx tsc --noEmit&&rollup -c rollup.config.js",
         "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md *.js",

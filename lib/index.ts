@@ -1,5 +1,4 @@
-import "regenerator-runtime/runtime";
-
+import "./polyfill";
 export * from "./renderasciimath.js";
 export * from "./rendermathml.js";
 export * from "./renderlatex.js";

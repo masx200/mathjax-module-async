@@ -10,5 +10,5 @@ declare function renderlatex(
     input: string,
     container: HTMLElement
 ): Promise<void>;
-declare function initmathjax(): Promise<any>;
+declare function initmathjax(): Promise<Record<string, any>>;
 export { renderasciimath, rendermathml, renderlatex, initmathjax };

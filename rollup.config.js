@@ -24,12 +24,12 @@ export default [
         input: "./lib/index.ts",
         output: [
             {
-                file: "./lib/index.cjs",
+                file: "./dist/index.cjs",
                 format: "cjs",
                 sourcemap: true,
             },
             {
-                file: "./lib/index.js",
+                file: "./dist/index.js",
                 format: "esm",
                 sourcemap: true,
             },

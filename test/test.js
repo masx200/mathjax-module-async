@@ -3,7 +3,7 @@ import {
     renderasciimath,
     renderlatex,
     initmathjax,
-} from "../lib/index.js";
+} from "../dist/index.js";
 import { latexinput } from "./latexinput.js";
 import { mathmlinput } from "./mathmlinput.js";
 import { asciimathinput } from "./asciimathinput.js";
