@@ -1,4 +1,4 @@
- const container = Object.assign(
+const container = Object.assign(
     document.body.appendChild(document.createElement("div")),
     { id: "container" }
 );
