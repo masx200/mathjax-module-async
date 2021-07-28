@@ -10,6 +10,6 @@
 import { cachepromise } from "./cachepromise";
 import { loadmodules } from "./loadmodules";
 export const loadmathjax = cachepromise(async function () {
-  //  await loadsheet(mathjaxcss);
+    //  await loadsheet(mathjaxcss);
     return loadmodules();
 });
