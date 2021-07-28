@@ -1,4 +1,4 @@
-import { version } from "./version.js";
+import { mathjaxbase } from "./mathjaxurl.js";
 export function getmathjaxcss() {
     return `@charset "utf-8";
 
@@ -1176,133 +1176,133 @@ export function getmathjaxcss() {
     
     @font-face {
         font-family: MJXZERO;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Zero.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-B;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-I;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-MI;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-BI;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-S1;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-S2;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-S3;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-S4;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-A;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-C;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-CB;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-FR;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-FRB;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-SS;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-SSB;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-SSI;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-SC;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-T;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-V;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff")
             format("woff");
     }
     
     @font-face {
         font-family: MJXTEX-VB;
-        src: url("https://cdn.jsdelivr.net/npm/mathjax@${version}/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff")
+        src: url("${mathjaxbase}/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff")
             format("woff");
     }
     `;

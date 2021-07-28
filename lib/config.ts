@@ -3,10 +3,10 @@ const config = {
     startup: { typeset: false },
     loader: {
         load: [
-            "input/asciimath",
-            "output/chtml",
-            "input/tex-full",
-            "input/mml",
+            // "input/asciimath",
+            // "output/chtml",
+            // "input/tex-full",
+            // "input/mml",
         ],
         paths: {
             mathjax: mathjaxbase,

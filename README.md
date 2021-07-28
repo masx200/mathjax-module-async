@@ -4,13 +4,15 @@
 
 把 mathjax 转化成模块形式异步加载导出,并且不会污染全局变量
 
-支持输入:asciimath,latex,mathml
+支持输入: asciimath,latex,mathml
 
-支持输出:chtml
+支持输出: chtml
 
-导出三个方法,把输入的数学公式,渲染成元素,添加到容器中,
+导出几个方法,把输入的数学公式,渲染成元素,添加到容器中,
 
 不会在加载时自动渲染文档中所有公式
+
+由于使用了`Proxy`,所以支持的浏览器必须支持 ES2015
 
 # 在线演示
 
@@ -30,6 +32,7 @@ import {
     rendermathml,
     renderasciimath,
     renderlatex,
+    initmathjax,
 } from "@masx200/mathjax-module-async";
 ```
 
@@ -50,3 +53,7 @@ https://github.com/masx200/mathjax-module-async/blob/master/lib/index.d.ts
 ## renderlatex
 
 把输入的 latex 格式的文字渲染到元素，并添加到容器中
+
+## initmathjax
+
+异步加载 MathJax 并返回 MathJax

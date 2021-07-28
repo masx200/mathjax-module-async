@@ -1,6 +1,7 @@
 import { loadmathjax } from "./loadmathjax.js";
 
 export async function initmathjax() {
-    await loadmathjax();
+    const MathJax = await loadmathjax();
     await MathJax.startup.promise;
+    return MathJax;
 }
