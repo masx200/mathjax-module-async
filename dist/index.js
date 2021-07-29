@@ -151,43 +151,55 @@ var p = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), l = {
     type: "application/javascript"
 }));
 
-var x = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(d), h = [ m, d("startup"), f ].concat(a(x));
+var h = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(y), x = [ m, y("startup"), f ].concat(a(h));
 
-function d(t) {
+function y(t) {
     return p + "/" + t + ".min.js";
 }
 
-function y() {
+function d() {
     return v.apply(this, arguments);
 }
 
 function v() {
     return (v = e(regeneratorRuntime.mark((function t() {
-        var e, n, r, u, c, s, f, p, l, m, x;
+        var e, n, r, u, c, s, f, p, l, m, h, y, d;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, Promise.all(h.map((function(t) {
+                return t.next = 2, Promise.all(x.map((function(t) {
                     return i(t);
                 })));
 
               case 2:
-                return e = t.sent, n = e.join("\n;\n"), r = {}, t.t0 = Proxy, t.t1 = {
+                return e = t.sent, n = e.join("\n;\n"), r = {}, u = {
                     get MathJax() {
                         return r;
                     },
                     set MathJax(t) {
                         r = t;
                     }
-                }, t.t2 = {
+                }, c = new Proxy(window, {
                     get: function(t, e, n) {
-                        var r = Reflect.get(t, e, n) || Reflect.get(window, e, window);
+                        var r = Reflect.get(u, e, u) || Reflect.get(window, e, window);
                         return "function" == typeof r ? r.bind(window) : r;
                     },
                     has: function(t, e) {
-                        return Reflect.has(t, e) || Reflect.has(window, e);
+                        return Reflect.has(t, e) || Reflect.has(u, e);
+                    },
+                    set: function(t, e, n, r) {
+                        return Reflect.set(u, e, n, u);
+                    },
+                    ownKeys: function(t) {
+                        return Array.from(new Set([].concat(a(Reflect.ownKeys(t)), a(Reflect.ownKeys(u)))));
+                    },
+                    defineProperty: function(t, e, n) {
+                        return Reflect.defineProperty(u, e, n);
+                    },
+                    deleteProperty: function(t, e) {
+                        return Reflect.deleteProperty(u, e);
                     }
-                }, u = new t.t0(t.t1, t.t2), c = new Proxy({}, {
+                }), s = new Proxy({}, {
                     get: function(t, e, n) {
                         return Reflect.get(r, e, r);
                     },
@@ -206,20 +218,19 @@ function v() {
                     deleteProperty: function(t, e) {
                         return Reflect.deleteProperty(r, e);
                     }
-                }), s = Object.fromEntries(Reflect.ownKeys(window).filter((function(t) {
-                    return Object.is(window, Reflect.get(window, t));
-                })).map((function(t) {
-                    return [ t, u ];
-                }))), f = {
+                }), f = [ "self", "frames", "parent", "content", "window", "top", "globalThis" ], 
+                p = Object.fromEntries(f.map((function(t) {
+                    return [ t, c ];
+                }))), l = {
                     value: void 0,
                     mathfontfamily: void 0,
                     mathfontsize: void 0
-                }, p = Object.assign(f, {
-                    MathJax: c
-                }, s), l = Object.keys(p), m = Object.values(p), x = o(Function, a(l).concat([ n ])), 
-                Reflect.apply(x, u, m), t.abrupt("return", r);
+                }, m = Object.assign(l, {
+                    MathJax: s
+                }, p), h = Object.keys(m), y = Object.values(m), d = o(Function, a(h).concat([ n ])), 
+                Reflect.apply(d, c, y), t.abrupt("return", r);
 
-              case 18:
+              case 17:
               case "end":
                 return t.stop();
             }
@@ -231,7 +242,7 @@ var w, b = c(e(regeneratorRuntime.mark((function t() {
     return regeneratorRuntime.wrap((function(t) {
         for (;;) switch (t.prev = t.next) {
           case 0:
-            return t.abrupt("return", y());
+            return t.abrupt("return", d());
 
           case 1:
           case "end":
@@ -279,12 +290,12 @@ var j = {
     mathml: "mathml2chtmlPromise"
 };
 
-function O(t, e, n) {
-    return P.apply(this, arguments);
+function P(t, e, n) {
+    return k.apply(this, arguments);
 }
 
-function P() {
-    return (P = e(regeneratorRuntime.mark((function t(e, n, r) {
+function k() {
+    return (k = e(regeneratorRuntime.mark((function t(e, n, r) {
         var o, a, u, c, i, s = arguments;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
@@ -312,5 +323,5 @@ function P() {
     })))).apply(this, arguments);
 }
 
-export { g as initmathjax, O as rendermath };
+export { g as initmathjax, P as rendermath };
 //# sourceMappingURL=index.js.map
