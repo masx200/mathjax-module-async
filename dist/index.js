@@ -158,11 +158,11 @@ function d(t) {
 }
 
 function y() {
-    return w.apply(this, arguments);
+    return v.apply(this, arguments);
 }
 
-function w() {
-    return (w = e(regeneratorRuntime.mark((function t() {
+function v() {
+    return (v = e(regeneratorRuntime.mark((function t() {
         var e, n, r, u, c, s, f, p, l, m, x;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
@@ -186,9 +186,6 @@ function w() {
                     },
                     has: function(t, e) {
                         return Reflect.has(t, e) || Reflect.has(window, e);
-                    },
-                    ownKeys: function(t) {
-                        return Reflect.ownKeys(t) || Reflect.ownKeys(window);
                     }
                 }, u = new t.t0(t.t1, t.t2), c = new Proxy({}, {
                     get: function(t, e, n) {
@@ -230,7 +227,7 @@ function w() {
     })))).apply(this, arguments);
 }
 
-var v, b = c(e(regeneratorRuntime.mark((function t() {
+var w, b = c(e(regeneratorRuntime.mark((function t() {
     return regeneratorRuntime.wrap((function(t) {
         for (;;) switch (t.prev = t.next) {
           case 0:
@@ -253,11 +250,11 @@ function R() {
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                if (!v) {
+                if (!w) {
                     t.next = 2;
                     break;
                 }
-                return t.abrupt("return", v);
+                return t.abrupt("return", w);
 
               case 2:
                 return t.next = 4, b();
@@ -266,7 +263,7 @@ function R() {
                 return e = t.sent, t.next = 7, e.startup.promise;
 
               case 7:
-                return v = e, t.abrupt("return", e);
+                return w = e, t.abrupt("return", e);
 
               case 9:
               case "end":

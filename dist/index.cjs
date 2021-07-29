@@ -135,39 +135,39 @@ var i = c(function() {
     return function(e) {
         return t.apply(this, arguments);
     };
-}()), s = [ "startup", "[tex]/action", "[tex]/all-packages", "[tex]/ams", "[tex]/amscd", "[tex]/bbox", "[tex]/boldsymbol", "[tex]/braket", "[tex]/bussproofs", "[tex]/cancel", "[tex]/cases", "[tex]/centernot", "[tex]/color", "[tex]/colortbl", "[tex]/colorv2", "[tex]/configmacros", "[tex]/empheq", "[tex]/enclose", "[tex]/extpfeil", "[tex]/gensymb", "[tex]/html", "[tex]/mathtools", "[tex]/mhchem", "[tex]/newcommand", "[tex]/noerrors", "[tex]/noundefined", "[tex]/physics", "[tex]/require", "[tex]/setoptions", "[tex]/tagformat", "[tex]/textcomp", "[tex]/textmacros", "[tex]/unicode", "[tex]/upgreek", "[tex]/verb", "core", "input/asciimath", "input/mml", "input/tex-base", "input/tex-full", "loader", "output/chtml", "output/chtml/fonts/tex" ], f = URL.createObjectURL(new Blob([ "\nMathJax.loader.preLoad(".concat(s.map((function(t) {
+}()), s = [ "startup", "[tex]/action", "[tex]/all-packages", "[tex]/ams", "[tex]/amscd", "[tex]/bbox", "[tex]/boldsymbol", "[tex]/braket", "[tex]/bussproofs", "[tex]/cancel", "[tex]/cases", "[tex]/centernot", "[tex]/color", "[tex]/colortbl", "[tex]/colorv2", "[tex]/configmacros", "[tex]/empheq", "[tex]/enclose", "[tex]/extpfeil", "[tex]/gensymb", "[tex]/html", "[tex]/mathtools", "[tex]/mhchem", "[tex]/newcommand", "[tex]/noerrors", "[tex]/noundefined", "[tex]/physics", "[tex]/require", "[tex]/setoptions", "[tex]/tagformat", "[tex]/textcomp", "[tex]/textmacros", "[tex]/unicode", "[tex]/upgreek", "[tex]/verb", "core", "input/asciimath", "input/mml", "input/tex-base", "input/tex-full", "loader", "output/chtml", "output/chtml/fonts/tex" ], p = URL.createObjectURL(new Blob([ "\nMathJax.loader.preLoad(".concat(s.map((function(t) {
     return JSON.stringify(t);
 })).join(","), ")\n    ") ], {
     type: "application/javascript"
 }));
 
-var p = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), l = {
+var f = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), l = {
     startup: {
         typeset: !1
     },
     loader: {
         load: [],
         paths: {
-            mathjax: p
+            mathjax: f
         }
     }
 }, m = URL.createObjectURL(new Blob([ "\nwindow.MathJax=".concat(JSON.stringify(l), "\n    ") ], {
     type: "application/javascript"
 }));
 
-var x = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(d), h = [ m, d("startup"), f ].concat(a(x));
+var x = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(d), h = [ m, d("startup"), p ].concat(a(x));
 
 function d(t) {
-    return p + "/" + t + ".min.js";
+    return f + "/" + t + ".min.js";
 }
 
 function y() {
-    return w.apply(this, arguments);
+    return v.apply(this, arguments);
 }
 
-function w() {
-    return (w = e(regeneratorRuntime.mark((function t() {
-        var e, n, r, u, c, s, f, p, l, m, x;
+function v() {
+    return (v = e(regeneratorRuntime.mark((function t() {
+        var e, n, r, u, c, s, p, f, l, m, x;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
@@ -190,9 +190,6 @@ function w() {
                     },
                     has: function(t, e) {
                         return Reflect.has(t, e) || Reflect.has(window, e);
-                    },
-                    ownKeys: function(t) {
-                        return Reflect.ownKeys(t) || Reflect.ownKeys(window);
                     }
                 }, u = new t.t0(t.t1, t.t2), c = new Proxy({}, {
                     get: function(t, e, n) {
@@ -217,13 +214,13 @@ function w() {
                     return Object.is(window, Reflect.get(window, t));
                 })).map((function(t) {
                     return [ t, u ];
-                }))), f = {
+                }))), p = {
                     value: void 0,
                     mathfontfamily: void 0,
                     mathfontsize: void 0
-                }, p = Object.assign(f, {
+                }, f = Object.assign(p, {
                     MathJax: c
-                }, s), l = Object.keys(p), m = Object.values(p), x = o(Function, a(l).concat([ n ])), 
+                }, s), l = Object.keys(f), m = Object.values(f), x = o(Function, a(l).concat([ n ])), 
                 Reflect.apply(x, u, m), t.abrupt("return", r);
 
               case 18:
@@ -234,7 +231,7 @@ function w() {
     })))).apply(this, arguments);
 }
 
-var v, b = c(e(regeneratorRuntime.mark((function t() {
+var w, b = c(e(regeneratorRuntime.mark((function t() {
     return regeneratorRuntime.wrap((function(t) {
         for (;;) switch (t.prev = t.next) {
           case 0:
@@ -257,11 +254,11 @@ function R() {
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                if (!v) {
+                if (!w) {
                     t.next = 2;
                     break;
                 }
-                return t.abrupt("return", v);
+                return t.abrupt("return", w);
 
               case 2:
                 return t.next = 4, b();
@@ -270,7 +267,7 @@ function R() {
                 return e = t.sent, t.next = 7, e.startup.promise;
 
               case 7:
-                return v = e, t.abrupt("return", e);
+                return w = e, t.abrupt("return", e);
 
               case 9:
               case "end":

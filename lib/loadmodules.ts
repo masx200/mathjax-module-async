@@ -35,9 +35,9 @@ export async function loadmodules(): Promise<Record<string, any>> {
             has(t, p) {
                 return Reflect.has(t, p) || Reflect.has(window, p);
             },
-            ownKeys(t) {
-                return Reflect.ownKeys(t) || Reflect.ownKeys(window);
-            },
+            // ownKeys(t) {
+            //     return Reflect.ownKeys(t) || Reflect.ownKeys(window);
+            // },
         }
     );
 
