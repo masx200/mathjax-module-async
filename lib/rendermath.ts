@@ -1,4 +1,5 @@
 import { initmathjax } from "./initmathjax.js";
+import { mathrenderfuns } from "./mathrenderfuns";
 export type MathjaxInputType = "latex" | "mathml" | "asciimath";
 export async function rendermath(
     input: string,
@@ -23,5 +24,3 @@ export async function rendermath(
     MathJax.startup.document.clear();
     MathJax.startup.document.updateDocument();
 }
-
-import { mathrenderfuns } from "./mathrenderfuns";
