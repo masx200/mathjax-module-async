@@ -44,12 +44,7 @@ yarn add "@masx200/mathjax-module-async"
 #### 使用说明
 
 ```js
-import {
-    rendermathml,
-    renderasciimath,
-    renderlatex,
-    initmathjax,
-} from "@masx200/mathjax-module-async";
+import { rendermath, initmathjax } from "@masx200/mathjax-module-async";
 ```
 
 # API
@@ -58,17 +53,17 @@ import {
 
 https://github.com/masx200/mathjax-module-async/blob/master/lib/index.d.ts
 
-## rendermathml
+## rendermath
 
-异步方法,把输入的 mathml 格式的文字渲染到元素，并添加到容器中
+异步方法,把输入的 数学 格式的文字渲染到元素，并添加到容器中
 
-## renderasciimath
+`input`:数学公式的文本内容
 
-异步方法,把输入的 asciimath 格式的文字渲染到元素，并添加到容器中
+`type`：数学公式使用的语言是` "latex" | "mathml" | "asciimath"`之一
 
-## renderlatex
+`container`:要渲染数学到的容器
 
-异步方法,把输入的 latex 格式的文字渲染到元素，并添加到容器中
+`opts`:传递给渲染函数`mathml2chtmlPromise,asciimath2chtmlPromise,tex2chtmlPromise`之一的参数，可以通过`MathJax.getMetricsFor`获取
 
 ## initmathjax
 
