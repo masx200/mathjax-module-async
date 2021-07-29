@@ -234,7 +234,7 @@ function w() {
     })))).apply(this, arguments);
 }
 
-var v = c(e(regeneratorRuntime.mark((function t() {
+var v, g = c(e(regeneratorRuntime.mark((function t() {
     return regeneratorRuntime.wrap((function(t) {
         for (;;) switch (t.prev = t.next) {
           case 0:
@@ -247,47 +247,32 @@ var v = c(e(regeneratorRuntime.mark((function t() {
     }), t);
 }))));
 
-function g() {
-    return R.apply(this, arguments);
+function R() {
+    return b.apply(this, arguments);
 }
 
-function R() {
-    return (R = e(regeneratorRuntime.mark((function t() {
+function b() {
+    return (b = e(regeneratorRuntime.mark((function t() {
         var e;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, v();
+                if (!v) {
+                    t.next = 2;
+                    break;
+                }
+                return t.abrupt("return", v);
 
               case 2:
-                return e = t.sent, t.next = 5, e.startup.promise;
+                return t.next = 4, g();
 
-              case 5:
-                return t.abrupt("return", e);
+              case 4:
+                return e = t.sent, t.next = 7, e.startup.promise;
 
-              case 6:
-              case "end":
-                return t.stop();
-            }
-        }), t);
-    })))).apply(this, arguments);
-}
+              case 7:
+                return v = e, t.abrupt("return", e);
 
-function b() {
-    return (b = e(regeneratorRuntime.mark((function t(e, n) {
-        var r, o, u;
-        return regeneratorRuntime.wrap((function(t) {
-            for (;;) switch (t.prev = t.next) {
-              case 0:
-                return t.next = 2, g();
-
-              case 2:
-                return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.asciimath2chtmlPromise(e, o);
-
-              case 6:
-                u = t.sent, n.appendChild(u), r.startup.document.clear(), r.startup.document.updateDocument();
-
-              case 10:
+              case 9:
               case "end":
                 return t.stop();
             }
@@ -301,10 +286,10 @@ function j() {
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, g();
+                return t.next = 2, R();
 
               case 2:
-                return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.mathml2chtmlPromise(e, o);
+                return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.asciimath2chtmlPromise(e, o);
 
               case 6:
                 u = t.sent, n.appendChild(u), r.startup.document.clear(), r.startup.document.updateDocument();
@@ -323,7 +308,29 @@ function P() {
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, g();
+                return t.next = 2, R();
+
+              case 2:
+                return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.mathml2chtmlPromise(e, o);
+
+              case 6:
+                u = t.sent, n.appendChild(u), r.startup.document.clear(), r.startup.document.updateDocument();
+
+              case 10:
+              case "end":
+                return t.stop();
+            }
+        }), t);
+    })))).apply(this, arguments);
+}
+
+function k() {
+    return (k = e(regeneratorRuntime.mark((function t(e, n) {
+        var r, o, u;
+        return regeneratorRuntime.wrap((function(t) {
+            for (;;) switch (t.prev = t.next) {
+              case 0:
+                return t.next = 2, R();
 
               case 2:
                 return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.tex2chtmlPromise(e, o);
@@ -339,11 +346,11 @@ function P() {
     })))).apply(this, arguments);
 }
 
-exports.initmathjax = g, exports.renderasciimath = function(t, e) {
-    return b.apply(this, arguments);
-}, exports.renderlatex = function(t, e) {
-    return P.apply(this, arguments);
-}, exports.rendermathml = function(t, e) {
+exports.initmathjax = R, exports.renderasciimath = function(t, e) {
     return j.apply(this, arguments);
+}, exports.renderlatex = function(t, e) {
+    return k.apply(this, arguments);
+}, exports.rendermathml = function(t, e) {
+    return P.apply(this, arguments);
 };
 //# sourceMappingURL=index.cjs.map

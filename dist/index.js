@@ -230,7 +230,7 @@ function w() {
     })))).apply(this, arguments);
 }
 
-var v = c(e(regeneratorRuntime.mark((function t() {
+var v, g = c(e(regeneratorRuntime.mark((function t() {
     return regeneratorRuntime.wrap((function(t) {
         for (;;) switch (t.prev = t.next) {
           case 0:
@@ -243,25 +243,32 @@ var v = c(e(regeneratorRuntime.mark((function t() {
     }), t);
 }))));
 
-function g() {
-    return R.apply(this, arguments);
+function R() {
+    return b.apply(this, arguments);
 }
 
-function R() {
-    return (R = e(regeneratorRuntime.mark((function t() {
+function b() {
+    return (b = e(regeneratorRuntime.mark((function t() {
         var e;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, v();
+                if (!v) {
+                    t.next = 2;
+                    break;
+                }
+                return t.abrupt("return", v);
 
               case 2:
-                return e = t.sent, t.next = 5, e.startup.promise;
+                return t.next = 4, g();
 
-              case 5:
-                return t.abrupt("return", e);
+              case 4:
+                return e = t.sent, t.next = 7, e.startup.promise;
 
-              case 6:
+              case 7:
+                return v = e, t.abrupt("return", e);
+
+              case 9:
               case "end":
                 return t.stop();
             }
@@ -269,17 +276,17 @@ function R() {
     })))).apply(this, arguments);
 }
 
-function b(t, e) {
-    return j.apply(this, arguments);
+function j(t, e) {
+    return k.apply(this, arguments);
 }
 
-function j() {
-    return (j = e(regeneratorRuntime.mark((function t(e, n) {
+function k() {
+    return (k = e(regeneratorRuntime.mark((function t(e, n) {
         var r, o, u;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, g();
+                return t.next = 2, R();
 
               case 2:
                 return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.asciimath2chtmlPromise(e, o);
@@ -296,16 +303,16 @@ function j() {
 }
 
 function P(t, e) {
-    return k.apply(this, arguments);
+    return O.apply(this, arguments);
 }
 
-function k() {
-    return (k = e(regeneratorRuntime.mark((function t(e, n) {
+function O() {
+    return (O = e(regeneratorRuntime.mark((function t(e, n) {
         var r, o, u;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, g();
+                return t.next = 2, R();
 
               case 2:
                 return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.mathml2chtmlPromise(e, o);
@@ -321,17 +328,17 @@ function k() {
     })))).apply(this, arguments);
 }
 
-function O(t, e) {
-    return M.apply(this, arguments);
+function M(t, e) {
+    return A.apply(this, arguments);
 }
 
-function M() {
-    return (M = e(regeneratorRuntime.mark((function t(e, n) {
+function A() {
+    return (A = e(regeneratorRuntime.mark((function t(e, n) {
         var r, o, u;
         return regeneratorRuntime.wrap((function(t) {
             for (;;) switch (t.prev = t.next) {
               case 0:
-                return t.next = 2, g();
+                return t.next = 2, R();
 
               case 2:
                 return r = t.sent, o = r.getMetricsFor(n), t.next = 6, r.tex2chtmlPromise(e, o);
@@ -347,5 +354,5 @@ function M() {
     })))).apply(this, arguments);
 }
 
-export { g as initmathjax, b as renderasciimath, O as renderlatex, P as rendermathml };
+export { R as initmathjax, j as renderasciimath, M as renderlatex, P as rendermathml };
 //# sourceMappingURL=index.js.map
