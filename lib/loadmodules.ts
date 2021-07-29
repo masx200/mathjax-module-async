@@ -11,35 +11,43 @@ export async function loadmodules(): Promise<Record<string, any>> {
     // console.log(scriptbody);
 
     let MathJax: Record<string, any> = {};
-
-    const global = new Proxy(
-        {
-            get MathJax() {
-                return MathJax;
-            },
-            set MathJax(value) {
-                MathJax = value;
-            },
+    const fake = {
+        get MathJax() {
+            return MathJax;
         },
-        {
-            get(t, p, r) {
-                const value =
-                    Reflect.get(t, p, r) || Reflect.get(window, p, window);
-                if (typeof value === "function") {
-                    return value.bind(window);
-                } else {
-                    return value;
-                }
-            },
+        set MathJax(value) {
+            MathJax = value;
+        },
+    };
+    const global = new Proxy(window, {
+        get(t, p, r) {
+            const value = Reflect.get(fake, p, fake) || Reflect.get(t, p, r);
+            if (typeof value === "function") {
+                return value.bind(undefined);
+            } else {
+                return value;
+            }
+        },
 
-            has(t, p) {
-                return Reflect.has(t, p) || Reflect.has(window, p);
-            },
-            // ownKeys(t) {
-            //     return Reflect.ownKeys(t) || Reflect.ownKeys(window);
-            // },
-        }
-    );
+        has(t, p) {
+            return Reflect.has(t, p) || Reflect.has(fake, p);
+        },
+        set(t, p, v, r) {
+            return Reflect.set(fake, p, v, fake);
+        },
+        ownKeys(t) {
+            return Array.from(
+                new Set([...Reflect.ownKeys(t), ...Reflect.ownKeys(fake)])
+            );
+        },
+        defineProperty(t, p, a) {
+            return Reflect.defineProperty(fake, p, a);
+        },
+
+        deleteProperty(t, p) {
+            return Reflect.deleteProperty(fake, p);
+        },
+    });
 
     const proxymathjax = new Proxy(
         {},
@@ -65,9 +73,19 @@ export async function loadmodules(): Promise<Record<string, any>> {
             },
         }
     );
+    const equalglobals = [
+        "self",
+        "frames",
+        "parent",
+        "content",
+        "window",
+        "top",
+        "globalThis",
+    ];
     const likewindow = Object.fromEntries(
-        Reflect.ownKeys(window)
-            .filter((k) => Object.is(window, Reflect.get(window, k)))
+        equalglobals
+            // Reflect.ownKeys(window)
+            //     .filter((k) => Object.is(window, Reflect.get(window, k)))
             .map((k) => [k, global])
     );
     // three global variables are accidentally defined
