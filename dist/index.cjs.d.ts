@@ -1,5 +1,4 @@
-declare function renderasciimath(input: string, container: HTMLElement): Promise<void>;
-declare function rendermathml(input: string, container: HTMLElement): Promise<void>;
-declare function renderlatex(input: string, container: HTMLElement): Promise<void>;
+type MathjaxInputType = "latex" | "mathml" | "asciimath";
+declare function rendermath(input: string, type: MathjaxInputType, container: HTMLElement, opts?: Record<string, any>): Promise<void>;
 declare function initmathjax(): Promise<Record<string, any>>;
-export { renderasciimath, rendermathml, renderlatex, initmathjax };
+export { MathjaxInputType, rendermath, initmathjax };

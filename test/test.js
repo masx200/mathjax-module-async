@@ -1,9 +1,4 @@
-import {
-    rendermathml,
-    renderasciimath,
-    renderlatex,
-    initmathjax,
-} from "../dist/index.js";
+import { rendermath, initmathjax } from "../dist/index.js";
 import { latexinput } from "./latexinput.js";
 import { mathmlinput } from "./mathmlinput.js";
 import { asciimathinput } from "./asciimathinput.js";
@@ -18,9 +13,9 @@ async function start() {
     console.log(MathJax);
     // console.timeEnd('1')
     await Promise.all([
-        renderasciimath(asciimathinput, container),
-        renderlatex(latexinput, container),
-        rendermathml(mathmlinput, container),
+        rendermath(asciimathinput, "asciimath", container),
+        rendermath(latexinput, "latex", container),
+        rendermath(mathmlinput, "mathml", container),
     ]);
 }
 start();
