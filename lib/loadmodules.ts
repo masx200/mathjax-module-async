@@ -21,7 +21,8 @@ export async function loadmodules(): Promise<Record<string, any>> {
     };
     const global = new Proxy(window, {
         get(t, p, r) {
-            const value = Reflect.get(fake, p, fake) || Reflect.get(window, p, window);
+            const value =
+                Reflect.get(fake, p, fake) || Reflect.get(window, p, window);
             if (typeof value === "function") {
                 return value.bind(window);
             } else {
