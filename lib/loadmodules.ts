@@ -1,3 +1,4 @@
+import { createfunction } from "./createfunction";
 import { fetchsource } from "./fetchsource";
 import { scriptstoload } from "./scriptstoload";
 
@@ -103,7 +104,8 @@ export async function loadmodules(): Promise<Record<string, any>> {
     );
     const argskey = Object.keys(scope);
     const argsvalue = Object.values(scope);
-    const fun = new Function(...argskey, scriptbody);
+    const fun = await createfunction(...argskey, scriptbody);
+    // const fun = new Function(...argskey, scriptbody);
     Reflect.apply(fun, global, argsvalue);
     // console.info.call(console, global);
     return MathJax;

@@ -1,327 +1,390 @@
-function t(t, e, n, r, o, a, u) {
+function e(e, t, n, r, o, a, c) {
     try {
-        var c = t[a](u), i = c.value;
-    } catch (t) {
-        return void n(t);
+        var u = e[a](c), i = u.value;
+    } catch (e) {
+        return void n(e);
     }
-    c.done ? e(i) : Promise.resolve(i).then(r, o);
+    u.done ? t(i) : Promise.resolve(i).then(r, o);
 }
 
-function e(e) {
+function t(t) {
     return function() {
         var n = this, r = arguments;
         return new Promise((function(o, a) {
-            var u = e.apply(n, r);
-            function c(e) {
-                t(u, o, a, c, i, "next", e);
+            var c = t.apply(n, r);
+            function u(t) {
+                e(c, o, a, u, i, "next", t);
             }
-            function i(e) {
-                t(u, o, a, c, i, "throw", e);
+            function i(t) {
+                e(c, o, a, u, i, "throw", t);
             }
-            c(void 0);
+            u(void 0);
         }));
     };
 }
 
-function n(t, e) {
-    return (n = Object.setPrototypeOf || function(t, e) {
-        return t.__proto__ = e, t;
-    })(t, e);
-}
-
-function r() {
-    if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-    if (Reflect.construct.sham) return !1;
-    if ("function" == typeof Proxy) return !0;
-    try {
-        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), 
-        !0;
-    } catch (t) {
-        return !1;
-    }
-}
-
-function o(t, e, a) {
-    return (o = r() ? Reflect.construct : function(t, e, r) {
-        var o = [ null ];
-        o.push.apply(o, e);
-        var a = new (Function.bind.apply(t, o));
-        return r && n(a, r.prototype), a;
-    }).apply(null, arguments);
-}
-
-function a(t) {
-    return function(t) {
-        if (Array.isArray(t)) return u(t);
-    }(t) || function(t) {
-        if ("undefined" != typeof Symbol && null != t[Symbol.iterator] || null != t["@@iterator"]) return Array.from(t);
-    }(t) || function(t, e) {
-        if (!t) return;
-        if ("string" == typeof t) return u(t, e);
-        var n = Object.prototype.toString.call(t).slice(8, -1);
-        "Object" === n && t.constructor && (n = t.constructor.name);
-        if ("Map" === n || "Set" === n) return Array.from(t);
-        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return u(t, e);
-    }(t) || function() {
+function n(e) {
+    return function(e) {
+        if (Array.isArray(e)) return r(e);
+    }(e) || function(e) {
+        if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e);
+    }(e) || function(e, t) {
+        if (!e) return;
+        if ("string" == typeof e) return r(e, t);
+        var n = Object.prototype.toString.call(e).slice(8, -1);
+        "Object" === n && e.constructor && (n = e.constructor.name);
+        if ("Map" === n || "Set" === n) return Array.from(e);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return r(e, t);
+    }(e) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }();
 }
 
-function u(t, e) {
-    (null == e || e > t.length) && (e = t.length);
-    for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n];
+function r(e, t) {
+    (null == t || t > e.length) && (t = e.length);
+    for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
 
-function c(t) {
+function o(e) {
     var n = new Map;
     return function() {
-        var r = e(regeneratorRuntime.mark((function e(r) {
-            var o, a, u, c, i = arguments;
-            return regeneratorRuntime.wrap((function(e) {
-                for (;;) switch (e.prev = e.next) {
+        var r = t(regeneratorRuntime.mark((function t(r) {
+            var o, a, c, u, i = arguments;
+            return regeneratorRuntime.wrap((function(t) {
+                for (;;) switch (t.prev = t.next) {
                   case 0:
                     if (!n.get(r)) {
-                        e.next = 2;
+                        t.next = 2;
                         break;
                     }
-                    return e.abrupt("return", n.get(r));
+                    return t.abrupt("return", n.get(r));
 
                   case 2:
-                    for (o = i.length, a = new Array(o > 1 ? o - 1 : 0), u = 1; u < o; u++) a[u - 1] = i[u];
-                    return c = t.apply(void 0, [ r ].concat(a)), n.set(r, c), e.abrupt("return", c);
+                    for (o = i.length, a = new Array(o > 1 ? o - 1 : 0), c = 1; c < o; c++) a[c - 1] = i[c];
+                    return u = e.apply(void 0, [ r ].concat(a)), n.set(r, u), t.abrupt("return", u);
 
                   case 6:
                   case "end":
-                    return e.stop();
+                    return t.stop();
                 }
-            }), e);
+            }), t);
         })));
-        return function(t) {
+        return function(e) {
             return r.apply(this, arguments);
         };
     }();
 }
 
-"undefined" == typeof regeneratorRuntime && function(t) {
-    var e = new XMLHttpRequest;
-    e.open("GET", t, !1), e.send(null);
-    var n = e.responseText;
+function a(e) {
+    return URL.createObjectURL(new Blob([ e ], {
+        type: "application/javascript"
+    }));
+}
+
+function c() {
+    return "xxxxxxxxyxxxxyxxxyyxxxyxxxxxxxxxxxx".replace(/[xy]/g, (function(e) {
+        var t = 16 * Math.random() | 0;
+        return ("x" == e ? t : 3 & t | 8).toString(16);
+    }));
+}
+
+"undefined" == typeof regeneratorRuntime && function(e) {
+    var t = new XMLHttpRequest;
+    t.open("GET", e, !1), t.send(null);
+    var n = t.responseText;
     new Function(n)();
 }("https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.9/runtime.min.js");
 
-var i = c(function() {
-    var t = e(regeneratorRuntime.mark((function t(e) {
+var u = o(function() {
+    var e = t(regeneratorRuntime.mark((function e(t) {
         var n, r = arguments;
-        return regeneratorRuntime.wrap((function(t) {
-            for (;;) switch (t.prev = t.next) {
+        return regeneratorRuntime.wrap((function(e) {
+            for (;;) switch (e.prev = e.next) {
               case 0:
-                return n = r.length > 1 && void 0 !== r[1] ? r[1] : {}, t.abrupt("return", fetch(e, n).then((function(t) {
-                    return t.ok ? t : Promise.reject(new Error("fetch failed:" + e));
-                })).then((function(t) {
-                    return t.text();
+                if (n = r.length > 1 && void 0 !== r[1] ? r[1] : {}, t) {
+                    e.next = 3;
+                    break;
+                }
+                throw new Error("src");
+
+              case 3:
+                return e.abrupt("return", new Promise((function(e, r) {
+                    function o() {
+                        try {
+                            window.removeEventListener("error", a);
+                        } catch (e) {}
+                        c.remove(), c.onload = c.onerror = null;
+                    }
+                    var a = function(e) {
+                        r(e.error), o();
+                    }, c = document.createElement("script");
+                    Object.assign(c, n, {
+                        async: !0
+                    }), c.src = t, c.onload = function() {
+                        e(), o();
+                    }, c.onerror = function(e, t, n, a, c) {
+                        r("string" == typeof e ? e : c || e), o();
+                    }, window.addEventListener("error", a, {
+                        once: !0
+                    }), document.head.appendChild(c);
+                })));
+
+              case 4:
+              case "end":
+                return e.stop();
+            }
+        }), e);
+    })));
+    return function(t) {
+        return e.apply(this, arguments);
+    };
+}());
+
+function i() {
+    return s.apply(this, arguments);
+}
+
+function s() {
+    return (s = t(regeneratorRuntime.mark((function e() {
+        var t, n, r, o, i, s, f, p, l = arguments;
+        return regeneratorRuntime.wrap((function(e) {
+            for (;;) switch (e.prev = e.next) {
+              case 0:
+                for (t = l.length, n = new Array(t), r = 0; r < t; r++) n[r] = l[r];
+                return o = n[n.length - 1], i = n.slice(0, n.length - 1), s = "function-" + c(), 
+                f = "window['".concat(s, "']=function(").concat(i.join("\n,\n"), "){\n").concat(o, "\n}"), 
+                p = a(f), e.prev = 6, e.next = 9, u(p);
+
+              case 9:
+                return e.abrupt("return", Reflect.get(window, s));
+
+              case 12:
+                throw e.prev = 12, e.t0 = e.catch(6), e.t0;
+
+              case 15:
+                return e.prev = 15, URL.revokeObjectURL(p), Reflect.set(window, s, void 0), e.finish(15);
+
+              case 19:
+              case "end":
+                return e.stop();
+            }
+        }), e, null, [ [ 6, 12, 15, 19 ] ]);
+    })))).apply(this, arguments);
+}
+
+var f = o(function() {
+    var e = t(regeneratorRuntime.mark((function e(t) {
+        var n, r = arguments;
+        return regeneratorRuntime.wrap((function(e) {
+            for (;;) switch (e.prev = e.next) {
+              case 0:
+                return n = r.length > 1 && void 0 !== r[1] ? r[1] : {}, e.abrupt("return", fetch(t, n).then((function(e) {
+                    return e.ok ? e : Promise.reject(new Error("fetch failed:" + t));
+                })).then((function(e) {
+                    return e.text();
                 })));
 
               case 2:
               case "end":
-                return t.stop();
+                return e.stop();
             }
-        }), t);
+        }), e);
     })));
-    return function(e) {
-        return t.apply(this, arguments);
+    return function(t) {
+        return e.apply(this, arguments);
     };
-}()), s = [ "startup", "[tex]/action", "[tex]/all-packages", "[tex]/ams", "[tex]/amscd", "[tex]/bbox", "[tex]/boldsymbol", "[tex]/braket", "[tex]/bussproofs", "[tex]/cancel", "[tex]/cases", "[tex]/centernot", "[tex]/color", "[tex]/colortbl", "[tex]/colorv2", "[tex]/configmacros", "[tex]/empheq", "[tex]/enclose", "[tex]/extpfeil", "[tex]/gensymb", "[tex]/html", "[tex]/mathtools", "[tex]/mhchem", "[tex]/newcommand", "[tex]/noerrors", "[tex]/noundefined", "[tex]/physics", "[tex]/require", "[tex]/setoptions", "[tex]/tagformat", "[tex]/textcomp", "[tex]/textmacros", "[tex]/unicode", "[tex]/upgreek", "[tex]/verb", "core", "input/asciimath", "input/mml", "input/tex-base", "input/tex-full", "loader", "output/chtml", "output/chtml/fonts/tex" ], f = URL.createObjectURL(new Blob([ "\nMathJax.loader.preLoad(".concat(s.map((function(t) {
-    return JSON.stringify(t);
-})).join(","), ")\n    ") ], {
-    type: "application/javascript"
-}));
+}()), p = a("\nMathJax.loader.preLoad(".concat([ "startup", "[tex]/action", "[tex]/all-packages", "[tex]/ams", "[tex]/amscd", "[tex]/bbox", "[tex]/boldsymbol", "[tex]/braket", "[tex]/bussproofs", "[tex]/cancel", "[tex]/cases", "[tex]/centernot", "[tex]/color", "[tex]/colortbl", "[tex]/colorv2", "[tex]/configmacros", "[tex]/empheq", "[tex]/enclose", "[tex]/extpfeil", "[tex]/gensymb", "[tex]/html", "[tex]/mathtools", "[tex]/mhchem", "[tex]/newcommand", "[tex]/noerrors", "[tex]/noundefined", "[tex]/physics", "[tex]/require", "[tex]/setoptions", "[tex]/tagformat", "[tex]/textcomp", "[tex]/textmacros", "[tex]/unicode", "[tex]/upgreek", "[tex]/verb", "core", "input/asciimath", "input/mml", "input/tex-base", "input/tex-full", "loader", "output/chtml", "output/chtml/fonts/tex" ].map((function(e) {
+    return JSON.stringify(e);
+})).join(","), ")\n    "));
 
-var p = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), l = {
+var l = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), x = {
     startup: {
         typeset: !1
     },
     loader: {
         load: [],
         paths: {
-            mathjax: p
+            mathjax: l
         }
     }
-}, m = URL.createObjectURL(new Blob([ "\nwindow.MathJax=".concat(JSON.stringify(l), "\n    ") ], {
+}, m = URL.createObjectURL(new Blob([ "\nwindow.MathJax=".concat(JSON.stringify(x), "\n    ") ], {
     type: "application/javascript"
 }));
 
-var h = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(y), x = [ m, y("startup"), f ].concat(a(h));
+var h = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(y), d = [ m, y("startup"), p ].concat(n(h));
 
-function y(t) {
-    return p + "/" + t + ".min.js";
-}
-
-function d() {
-    return v.apply(this, arguments);
+function y(e) {
+    return l + "/" + e + ".min.js";
 }
 
 function v() {
-    return (v = e(regeneratorRuntime.mark((function t() {
-        var e, n, r, u, c, s, f, p, l, m, h, y, d;
-        return regeneratorRuntime.wrap((function(t) {
-            for (;;) switch (t.prev = t.next) {
+    return w.apply(this, arguments);
+}
+
+function w() {
+    return (w = t(regeneratorRuntime.mark((function e() {
+        var t, r, o, a, c, u, s, p, l, x, m, h, y;
+        return regeneratorRuntime.wrap((function(e) {
+            for (;;) switch (e.prev = e.next) {
               case 0:
-                return t.next = 2, Promise.all(x.map((function(t) {
-                    return i(t);
+                return e.next = 2, Promise.all(d.map((function(e) {
+                    return f(e);
                 })));
 
               case 2:
-                return e = t.sent, n = e.join("\n;\n"), r = {}, u = {
+                return t = e.sent, r = t.join("\n;\n"), o = {}, a = {
                     get MathJax() {
-                        return r;
+                        return o;
                     },
-                    set MathJax(t) {
-                        r = t;
+                    set MathJax(e) {
+                        o = e;
                     }
                 }, c = new Proxy(window, {
-                    get: function(t, e, n) {
-                        var r = Reflect.get(u, e, u) || Reflect.get(window, e, window);
+                    get: function(e, t, n) {
+                        var r = Reflect.get(a, t, a) || Reflect.get(window, t, window);
                         return "function" == typeof r ? r.bind(window) : r;
                     },
-                    has: function(t, e) {
-                        return Reflect.has(t, e) || Reflect.has(u, e);
+                    has: function(e, t) {
+                        return Reflect.has(e, t) || Reflect.has(a, t);
                     },
-                    set: function(t, e, n, r) {
-                        return Reflect.set(u, e, n, u);
+                    set: function(e, t, n, r) {
+                        return Reflect.set(a, t, n, a);
                     },
-                    ownKeys: function(t) {
-                        return Array.from(new Set([].concat(a(Reflect.ownKeys(t)), a(Reflect.ownKeys(u)))));
+                    ownKeys: function(e) {
+                        return Array.from(new Set([].concat(n(Reflect.ownKeys(e)), n(Reflect.ownKeys(a)))));
                     },
-                    defineProperty: function(t, e, n) {
-                        return Reflect.defineProperty(u, e, n);
+                    defineProperty: function(e, t, n) {
+                        return Reflect.defineProperty(a, t, n);
                     },
-                    deleteProperty: function(t, e) {
-                        return Reflect.deleteProperty(u, e);
+                    deleteProperty: function(e, t) {
+                        return Reflect.deleteProperty(a, t);
                     }
-                }), s = new Proxy({}, {
-                    get: function(t, e, n) {
-                        return Reflect.get(r, e, r);
+                }), u = new Proxy({}, {
+                    get: function(e, t, n) {
+                        return Reflect.get(o, t, o);
                     },
-                    set: function(t, e, n, o) {
-                        return Reflect.set(r, e, n, r);
+                    set: function(e, t, n, r) {
+                        return Reflect.set(o, t, n, o);
                     },
-                    has: function(t, e) {
-                        return Reflect.has(r, e);
+                    has: function(e, t) {
+                        return Reflect.has(o, t);
                     },
-                    ownKeys: function(t) {
-                        return Reflect.ownKeys(r);
+                    ownKeys: function(e) {
+                        return Reflect.ownKeys(o);
                     },
-                    defineProperty: function(t, e, n) {
-                        return Reflect.defineProperty(r, e, n);
+                    defineProperty: function(e, t, n) {
+                        return Reflect.defineProperty(o, t, n);
                     },
-                    deleteProperty: function(t, e) {
-                        return Reflect.deleteProperty(r, e);
+                    deleteProperty: function(e, t) {
+                        return Reflect.deleteProperty(o, t);
                     }
-                }), f = [ "self", "frames", "parent", "content", "window", "top", "globalThis" ], 
-                p = Object.fromEntries(f.map((function(t) {
-                    return [ t, c ];
+                }), s = [ "self", "frames", "parent", "content", "window", "top", "globalThis" ], 
+                p = Object.fromEntries(s.map((function(e) {
+                    return [ e, c ];
                 }))), l = {
                     value: void 0,
                     mathfontfamily: void 0,
                     mathfontsize: void 0
-                }, m = Object.assign(l, {
-                    MathJax: s
-                }, p), h = Object.keys(m), y = Object.values(m), d = o(Function, a(h).concat([ n ])), 
-                Reflect.apply(d, c, y), t.abrupt("return", r);
+                }, x = Object.assign(l, {
+                    MathJax: u
+                }, p), m = Object.keys(x), h = Object.values(x), e.next = 16, i.apply(void 0, n(m).concat([ r ]));
 
-              case 17:
+              case 16:
+                return y = e.sent, Reflect.apply(y, c, h), e.abrupt("return", o);
+
+              case 19:
               case "end":
-                return t.stop();
+                return e.stop();
             }
-        }), t);
+        }), e);
     })))).apply(this, arguments);
 }
 
-var w, b = c(e(regeneratorRuntime.mark((function t() {
-    return regeneratorRuntime.wrap((function(t) {
-        for (;;) switch (t.prev = t.next) {
+var g, b = o(t(regeneratorRuntime.mark((function e() {
+    return regeneratorRuntime.wrap((function(e) {
+        for (;;) switch (e.prev = e.next) {
           case 0:
-            return t.abrupt("return", d());
+            return e.abrupt("return", v());
 
           case 1:
           case "end":
-            return t.stop();
+            return e.stop();
         }
-    }), t);
+    }), e);
 }))));
 
-function g() {
-    return R.apply(this, arguments);
+function R() {
+    return j.apply(this, arguments);
 }
 
-function R() {
-    return (R = e(regeneratorRuntime.mark((function t() {
-        var e;
-        return regeneratorRuntime.wrap((function(t) {
-            for (;;) switch (t.prev = t.next) {
+function j() {
+    return (j = t(regeneratorRuntime.mark((function e() {
+        var t;
+        return regeneratorRuntime.wrap((function(e) {
+            for (;;) switch (e.prev = e.next) {
               case 0:
-                if (!w) {
-                    t.next = 2;
+                if (!g) {
+                    e.next = 2;
                     break;
                 }
-                return t.abrupt("return", w);
+                return e.abrupt("return", g);
 
               case 2:
-                return t.next = 4, b();
+                return e.next = 4, b();
 
               case 4:
-                return e = t.sent, t.next = 7, e.startup.promise;
+                return t = e.sent, e.next = 7, t.startup.promise;
 
               case 7:
-                return w = e, t.abrupt("return", e);
+                return g = t, e.abrupt("return", t);
 
               case 9:
               case "end":
-                return t.stop();
+                return e.stop();
             }
-        }), t);
+        }), e);
     })))).apply(this, arguments);
 }
 
-var j = {
+var k = {
     latex: "tex2chtmlPromise",
     asciimath: "asciimath2chtmlPromise",
     mathml: "mathml2chtmlPromise"
 };
 
-function P(t, e, n) {
-    return k.apply(this, arguments);
+function P(e, t, n) {
+    return O.apply(this, arguments);
 }
 
-function k() {
-    return (k = e(regeneratorRuntime.mark((function t(e, n, r) {
-        var o, a, u, c, i, s = arguments;
-        return regeneratorRuntime.wrap((function(t) {
-            for (;;) switch (t.prev = t.next) {
+function O() {
+    return (O = t(regeneratorRuntime.mark((function e(t, n, r) {
+        var o, a, c, u, i, s = arguments;
+        return regeneratorRuntime.wrap((function(e) {
+            for (;;) switch (e.prev = e.next) {
               case 0:
-                if (o = s.length > 3 && void 0 !== s[3] ? s[3] : {}, a = j[n]) {
-                    t.next = 4;
+                if (o = s.length > 3 && void 0 !== s[3] ? s[3] : {}, a = k[n]) {
+                    e.next = 4;
                     break;
                 }
                 throw new Error("mathtype");
 
               case 4:
-                return t.next = 6, g();
+                return e.next = 6, R();
 
               case 6:
-                return u = t.sent, c = Object.assign(u.getMetricsFor(r), o), t.next = 10, Reflect.apply(Reflect.get(u, a), u, [ e, c ]);
+                return c = e.sent, u = Object.assign(c.getMetricsFor(r), o), e.next = 10, Reflect.apply(Reflect.get(c, a), c, [ t, u ]);
 
               case 10:
-                i = t.sent, r.appendChild(i), u.startup.document.clear(), u.startup.document.updateDocument();
+                i = e.sent, r.appendChild(i), c.startup.document.clear(), c.startup.document.updateDocument();
 
               case 14:
               case "end":
-                return t.stop();
+                return e.stop();
             }
-        }), t);
+        }), e);
     })))).apply(this, arguments);
 }
 
-export { g as initmathjax, P as rendermath };
+export { R as initmathjax, P as rendermath };
 //# sourceMappingURL=index.js.map

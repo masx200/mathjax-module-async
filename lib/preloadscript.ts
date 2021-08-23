@@ -1,8 +1,7 @@
+import { createObjectURLjavascript } from "./createObjectURLjavascript";
 import { preloaded } from "./preloaded";
 
-export const preloadscript = URL.createObjectURL(
-    new Blob([getmathjaxafter()], { type: "application/javascript" })
-);
+export const preloadscript = createObjectURLjavascript(getmathjaxafter());
 function getmathjaxafter() {
     return `
 MathJax.loader.preLoad(${preloaded.map((a) => JSON.stringify(a)).join(",")})

@@ -4,13 +4,13 @@
         "registry": "https://registry.npmjs.org/"
     },
     "name": "@masx200/mathjax-module-async",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
     "main": "dist/index.cjs",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": " npx tsc --noEmit&&rollup -c rollup.config.js",
+        "build": "rollup -c rollup.config.js",
         "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md *.js",
         "start": " npx @masx200/serve-cli "
     },
