@@ -21,6 +21,8 @@ export async function rendermath(
     ]);
 
     container.appendChild(node);
+    const mathjax = MathJax;
+    mathjax.startup.document.addStyleSheet();
     MathJax.startup.document.clear();
     MathJax.startup.document.updateDocument();
 }

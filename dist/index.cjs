@@ -1,26 +1,26 @@
 "use strict";
 
-function e(e, t, r, n, o, a, c) {
+function e(e, t, r, n, o, a, u) {
     try {
-        var u = e[a](c), i = u.value;
+        var c = e[a](u), i = c.value;
     } catch (e) {
         return void r(e);
     }
-    u.done ? t(i) : Promise.resolve(i).then(n, o);
+    c.done ? t(i) : Promise.resolve(i).then(n, o);
 }
 
 function t(t) {
     return function() {
         var r = this, n = arguments;
         return new Promise((function(o, a) {
-            var c = t.apply(r, n);
-            function u(t) {
-                e(c, o, a, u, i, "next", t);
+            var u = t.apply(r, n);
+            function c(t) {
+                e(u, o, a, c, i, "next", t);
             }
             function i(t) {
-                e(c, o, a, u, i, "throw", t);
+                e(u, o, a, c, i, "throw", t);
             }
-            u(void 0);
+            c(void 0);
         }));
     };
 }
@@ -52,7 +52,7 @@ function o(e) {
     var r = new Map;
     return function() {
         var n = t(regeneratorRuntime.mark((function t(n) {
-            var o, a, c, u, i = arguments;
+            var o, a, u, c, i = arguments;
             return regeneratorRuntime.wrap((function(t) {
                 for (;;) switch (t.prev = t.next) {
                   case 0:
@@ -63,8 +63,8 @@ function o(e) {
                     return t.abrupt("return", r.get(n));
 
                   case 2:
-                    for (o = i.length, a = new Array(o > 1 ? o - 1 : 0), c = 1; c < o; c++) a[c - 1] = i[c];
-                    return u = e.apply(void 0, [ n ].concat(a)), r.set(n, u), t.abrupt("return", u);
+                    for (o = i.length, a = new Array(o > 1 ? o - 1 : 0), u = 1; u < o; u++) a[u - 1] = i[u];
+                    return c = e.apply(void 0, [ n ].concat(a)), r.set(n, c), t.abrupt("return", c);
 
                   case 6:
                   case "end":
@@ -84,7 +84,7 @@ function a(e) {
     }));
 }
 
-function c() {
+function u() {
     return "xxxxxxxxyxxxxyxxxyyxxxyxxxxxxxxxxxx".replace(/[xy]/g, (function(e) {
         var t = 16 * Math.random() | 0;
         return ("x" == e ? t : 3 & t | 8).toString(16);
@@ -100,7 +100,7 @@ Object.defineProperty(exports, "__esModule", {
     new Function(r)();
 }("https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.9/runtime.min.js");
 
-var u = o(function() {
+var c = o(function() {
     var e = t(regeneratorRuntime.mark((function e(t) {
         var r, n = arguments;
         return regeneratorRuntime.wrap((function(e) {
@@ -118,20 +118,20 @@ var u = o(function() {
                         try {
                             window.removeEventListener("error", a);
                         } catch (e) {}
-                        c.remove(), c.onload = c.onerror = null;
+                        u.remove(), u.onload = u.onerror = null;
                     }
                     var a = function(e) {
                         n(e.error), o();
-                    }, c = document.createElement("script");
-                    Object.assign(c, r, {
+                    }, u = document.createElement("script");
+                    Object.assign(u, r, {
                         async: !0
-                    }), c.src = t, c.onload = function() {
+                    }), u.src = t, u.onload = function() {
                         e(), o();
-                    }, c.onerror = function(e, t, r, a, c) {
-                        n("string" == typeof e ? e : c || e), o();
+                    }, u.onerror = function(e, t, r, a, u) {
+                        n("string" == typeof e ? e : u || e), o();
                     }, window.addEventListener("error", a, {
                         once: !0
-                    }), document.head.appendChild(c);
+                    }), document.head.appendChild(u);
                 })));
 
               case 4:
@@ -156,9 +156,9 @@ function s() {
             for (;;) switch (e.prev = e.next) {
               case 0:
                 for (t = l.length, r = new Array(t), n = 0; n < t; n++) r[n] = l[n];
-                return o = r[r.length - 1], i = r.slice(0, r.length - 1), s = "function-" + c(), 
+                return o = r[r.length - 1], i = r.slice(0, r.length - 1), s = "function-" + u(), 
                 p = "window['".concat(s, "']=function(").concat(i.join("\n,\n"), "){\n").concat(o, "\n}"), 
-                f = a(p), e.prev = 6, e.next = 9, u(f);
+                f = a(p), e.prev = 6, e.next = 9, c(f);
 
               case 9:
                 return e.abrupt("return", Reflect.get(window, s));
@@ -228,7 +228,7 @@ function v() {
 
 function w() {
     return (w = t(regeneratorRuntime.mark((function e() {
-        var t, n, o, a, c, u, s, f, l, x, m, h, y;
+        var t, n, o, a, u, c, s, f, l, x, m, h, y;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
@@ -244,7 +244,7 @@ function w() {
                     set MathJax(e) {
                         o = e;
                     }
-                }, c = new Proxy(window, {
+                }, u = new Proxy(window, {
                     get: function(e, t, r) {
                         var n = Reflect.get(a, t, a) || Reflect.get(window, t, window);
                         return "function" == typeof n ? n.bind(window) : n;
@@ -264,7 +264,7 @@ function w() {
                     deleteProperty: function(e, t) {
                         return Reflect.deleteProperty(a, t);
                     }
-                }), u = new Proxy({}, {
+                }), c = new Proxy({}, {
                     get: function(e, t, r) {
                         return Reflect.get(o, t, o);
                     },
@@ -285,17 +285,17 @@ function w() {
                     }
                 }), s = [ "self", "frames", "parent", "content", "window", "top", "globalThis" ], 
                 f = Object.fromEntries(s.map((function(e) {
-                    return [ e, c ];
+                    return [ e, u ];
                 }))), l = {
                     value: void 0,
                     mathfontfamily: void 0,
                     mathfontsize: void 0
                 }, x = Object.assign(l, {
-                    MathJax: u
+                    MathJax: c
                 }, f), m = Object.keys(x), h = Object.values(x), e.next = 16, i.apply(void 0, r(m).concat([ n ]));
 
               case 16:
-                return y = e.sent, Reflect.apply(y, c, h), e.abrupt("return", o);
+                return y = e.sent, Reflect.apply(y, u, h), e.abrupt("return", o);
 
               case 19:
               case "end":
@@ -359,7 +359,7 @@ var P = {
 
 function k() {
     return (k = t(regeneratorRuntime.mark((function e(t, r, n) {
-        var o, a, c, u, i, s = arguments;
+        var o, a, u, c, i, s = arguments;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
@@ -373,12 +373,13 @@ function k() {
                 return e.next = 6, R();
 
               case 6:
-                return c = e.sent, u = Object.assign(c.getMetricsFor(n), o), e.next = 10, Reflect.apply(Reflect.get(c, a), c, [ t, u ]);
+                return u = e.sent, c = Object.assign(u.getMetricsFor(n), o), e.next = 10, Reflect.apply(Reflect.get(u, a), u, [ t, c ]);
 
               case 10:
-                i = e.sent, n.appendChild(i), c.startup.document.clear(), c.startup.document.updateDocument();
+                i = e.sent, n.appendChild(i), u.startup.document.addStyleSheet(), u.startup.document.clear(), 
+                u.startup.document.updateDocument();
 
-              case 14:
+              case 16:
               case "end":
                 return e.stop();
             }
