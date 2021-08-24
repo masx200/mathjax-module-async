@@ -13,6 +13,8 @@ export async function rendermath(
         throw new Error("mathtype");
     }
     const MathJax = await initmathjax();
+    const mathjax = MathJax;
+    mathjax.startup.document.addStyleSheet();
     const options = Object.assign(MathJax.getMetricsFor(container), opts);
 
     const node = await Reflect.apply(Reflect.get(MathJax, renderfun), MathJax, [
@@ -21,8 +23,7 @@ export async function rendermath(
     ]);
 
     container.appendChild(node);
-    const mathjax = MathJax;
-    mathjax.startup.document.addStyleSheet();
+
     MathJax.startup.document.clear();
     MathJax.startup.document.updateDocument();
 }

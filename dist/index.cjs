@@ -373,11 +373,11 @@ function k() {
                 return e.next = 6, R();
 
               case 6:
-                return u = e.sent, c = Object.assign(u.getMetricsFor(n), o), e.next = 10, Reflect.apply(Reflect.get(u, a), u, [ t, c ]);
+                return u = e.sent, u.startup.document.addStyleSheet(), c = Object.assign(u.getMetricsFor(n), o), 
+                e.next = 12, Reflect.apply(Reflect.get(u, a), u, [ t, c ]);
 
-              case 10:
-                i = e.sent, n.appendChild(i), u.startup.document.addStyleSheet(), u.startup.document.clear(), 
-                u.startup.document.updateDocument();
+              case 12:
+                i = e.sent, n.appendChild(i), u.startup.document.clear(), u.startup.document.updateDocument();
 
               case 16:
               case "end":
