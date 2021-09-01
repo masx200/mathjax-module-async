@@ -32,7 +32,7 @@
 
 # 在线演示
 
-https://masx200.github.io/mathjax-module-async/test/
+https://mathjax-module-async.vercel.app/
 
 #### 安装教程
 
