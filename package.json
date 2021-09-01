@@ -12,7 +12,8 @@
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md *.js",
-        "start": " npx @masx200/serve-cli "
+        "dev": "vite test ",
+        "prod": "vite build test"
     },
     "keywords": [],
     "author": "",
@@ -32,6 +33,7 @@
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-ts": "^1.4.0",
         "tslib": "^2.3.0",
-        "typescript": "^4.3.5"
+        "typescript": "^4.3.5",
+        "vite": "^2.5.3"
     }
 }
