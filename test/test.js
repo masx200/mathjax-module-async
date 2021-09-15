@@ -33,7 +33,7 @@ function createcontainers() {
 }
 
 async function start() {
-const { container1, container2, container3 } = createcontainers();
+//const { container1, container2, container3 } = createcontainers();
 
     // console.time('1')
     const MathJax = await initmathjax();
