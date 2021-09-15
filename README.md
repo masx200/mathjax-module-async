@@ -2,6 +2,8 @@
 
 #### 介绍
 
+浏览器中使用的,
+
 把 mathjax 转化成模块形式异步加载导出,并且不会污染全局变量
 
 支持输入: asciimath,latex,mathml
