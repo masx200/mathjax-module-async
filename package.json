@@ -4,16 +4,16 @@
         "registry": "https://registry.npmjs.org/"
     },
     "name": "@masx200/mathjax-module-async",
-    "version": "1.1.4",
+    "version": "1.2.0",
     "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
     "main": "dist/index.cjs",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "rollup -c rollup.config.js",
-        "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md *.js",
-        "dev": "vite test ",
-        "prod": "vite build test"
+        "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md *.js */*.vue *.ts",
+        "dev": "vite --config vite.config.ts ",
+        "prod": "vite build --config vite.config.ts"
     },
     "keywords": [],
     "author": "",
@@ -26,17 +26,26 @@
         "@rollup/plugin-commonjs": "^19.0.2",
         "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-node-resolve": "^13.0.4",
+        "@vitejs/plugin-vue": "^1.6.2",
+        "@vue/compiler-sfc": "^3.2.11",
+        "@vue/runtime-core": "^3.2.11",
         "core-js": "2",
+        "lodash": "^4.17.21",
         "prettier": "^2.3.2",
         "regenerator-runtime": "^0.13.9",
         "rollup": "^2.54.0",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-ts": "^1.4.0",
         "tslib": "^2.3.0",
-        "typescript": "^4.3.5",
-        "vite": "^2.5.3"
+        "typescript": "^4.4.3",
+        "vite": "^2.5.7",
+        "vite-plugin-element-plus": "^0.0.12",
+        "vue": "^3.2.11",
+        "@types/lodash": "^4.14.172",
+        "element-plus": "^1.1.0-beta.12"
     },
     "resolutions": {
         "debug": "4.3.2"
-    }
+    },
+    "dependencies": {}
 }

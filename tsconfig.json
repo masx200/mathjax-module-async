@@ -1,6 +1,14 @@
 {
-    "include": ["*.ts", "*/*.ts", "lib/"],
+    "include": [
+        "test/shims.d.ts",
+        "*.ts",
+        "*/*.ts",
+        "lib/",
+        "test",
+        "test/*.ts"
+    ],
     "compilerOptions": {
+        "types": ["vite/client"],
         "sourceMap": false,
         "inlineSourceMap": false,
         "pretty": true,

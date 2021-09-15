@@ -1,26 +1,26 @@
 "use strict";
 
-function e(e, t, r, n, o, a, u) {
+function e(e, t, r, n, o, a, c) {
     try {
-        var c = e[a](u), i = c.value;
+        var u = e[a](c), i = u.value;
     } catch (e) {
         return void r(e);
     }
-    c.done ? t(i) : Promise.resolve(i).then(n, o);
+    u.done ? t(i) : Promise.resolve(i).then(n, o);
 }
 
 function t(t) {
     return function() {
         var r = this, n = arguments;
         return new Promise((function(o, a) {
-            var u = t.apply(r, n);
-            function c(t) {
-                e(u, o, a, c, i, "next", t);
+            var c = t.apply(r, n);
+            function u(t) {
+                e(c, o, a, u, i, "next", t);
             }
             function i(t) {
-                e(u, o, a, c, i, "throw", t);
+                e(c, o, a, u, i, "throw", t);
             }
-            c(void 0);
+            u(void 0);
         }));
     };
 }
@@ -48,11 +48,29 @@ function n(e, t) {
     return n;
 }
 
-function o(e) {
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+}), "undefined" == typeof regeneratorRuntime && function(e) {
+    var t = new XMLHttpRequest;
+    t.open("GET", e, !1), t.send(null);
+    var r = t.responseText;
+    new Function(r)();
+}("https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.9/runtime.min.js");
+
+var o = {
+    containerWidth: 1261.3333740234375,
+    em: 16,
+    ex: 8.65,
+    family: "",
+    lineWidth: 1e6,
+    scale: 1.223133484162896
+};
+
+function a(e) {
     var r = new Map;
     return function() {
         var n = t(regeneratorRuntime.mark((function t(n) {
-            var o, a, u, c, i = arguments;
+            var o, a, c, u, i = arguments;
             return regeneratorRuntime.wrap((function(t) {
                 for (;;) switch (t.prev = t.next) {
                   case 0:
@@ -63,8 +81,8 @@ function o(e) {
                     return t.abrupt("return", r.get(n));
 
                   case 2:
-                    for (o = i.length, a = new Array(o > 1 ? o - 1 : 0), u = 1; u < o; u++) a[u - 1] = i[u];
-                    return c = e.apply(void 0, [ n ].concat(a)), r.set(n, c), t.abrupt("return", c);
+                    for (o = i.length, a = new Array(o > 1 ? o - 1 : 0), c = 1; c < o; c++) a[c - 1] = i[c];
+                    return u = e.apply(void 0, [ n ].concat(a)), r.set(n, u), t.abrupt("return", u);
 
                   case 6:
                   case "end":
@@ -78,7 +96,7 @@ function o(e) {
     }();
 }
 
-function a(e) {
+function c(e) {
     return URL.createObjectURL(new Blob([ e ], {
         type: "application/javascript"
     }));
@@ -91,16 +109,7 @@ function u() {
     }));
 }
 
-Object.defineProperty(exports, "__esModule", {
-    value: !0
-}), "undefined" == typeof regeneratorRuntime && function(e) {
-    var t = new XMLHttpRequest;
-    t.open("GET", e, !1), t.send(null);
-    var r = t.responseText;
-    new Function(r)();
-}("https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.9/runtime.min.js");
-
-var c = o(function() {
+var i = a(function() {
     var e = t(regeneratorRuntime.mark((function e(t) {
         var r, n = arguments;
         return regeneratorRuntime.wrap((function(e) {
@@ -118,20 +127,20 @@ var c = o(function() {
                         try {
                             window.removeEventListener("error", a);
                         } catch (e) {}
-                        u.remove(), u.onload = u.onerror = null;
+                        c.remove(), c.onload = c.onerror = null;
                     }
                     var a = function(e) {
                         n(e.error), o();
-                    }, u = document.createElement("script");
-                    Object.assign(u, r, {
+                    }, c = document.createElement("script");
+                    Object.assign(c, r, {
                         async: !0
-                    }), u.src = t, u.onload = function() {
+                    }), c.src = t, c.onload = function() {
                         e(), o();
-                    }, u.onerror = function(e, t, r, a, u) {
-                        n("string" == typeof e ? e : u || e), o();
+                    }, c.onerror = function(e, t, r, a, c) {
+                        n("string" == typeof e ? e : c || e), o();
                     }, window.addEventListener("error", a, {
                         once: !0
-                    }), document.head.appendChild(u);
+                    }), document.head.appendChild(c);
                 })));
 
               case 4:
@@ -145,20 +154,20 @@ var c = o(function() {
     };
 }());
 
-function i() {
-    return s.apply(this, arguments);
+function s() {
+    return p.apply(this, arguments);
 }
 
-function s() {
-    return (s = t(regeneratorRuntime.mark((function e() {
-        var t, r, n, o, i, s, p, f, l = arguments;
+function p() {
+    return (p = t(regeneratorRuntime.mark((function e() {
+        var t, r, n, o, a, s, p, f, l = arguments;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
                 for (t = l.length, r = new Array(t), n = 0; n < t; n++) r[n] = l[n];
-                return o = r[r.length - 1], i = r.slice(0, r.length - 1), s = "function-" + u(), 
-                p = "window['".concat(s, "']=function(").concat(i.join("\n,\n"), "){\n").concat(o, "\n}"), 
-                f = a(p), e.prev = 6, e.next = 9, c(f);
+                return o = r[r.length - 1], a = r.slice(0, r.length - 1), s = "function-" + u(), 
+                p = "window['".concat(s, "']=function(").concat(a.join("\n,\n"), "){\n").concat(o, "\n}"), 
+                f = c(p), e.prev = 6, e.next = 9, i(f);
 
               case 9:
                 return e.abrupt("return", Reflect.get(window, s));
@@ -177,7 +186,7 @@ function s() {
     })))).apply(this, arguments);
 }
 
-var p = o(function() {
+var f = a(function() {
     var e = t(regeneratorRuntime.mark((function e(t) {
         var r, n = arguments;
         return regeneratorRuntime.wrap((function(e) {
@@ -198,42 +207,42 @@ var p = o(function() {
     return function(t) {
         return e.apply(this, arguments);
     };
-}()), f = a("\nMathJax.loader.preLoad(".concat([ "startup", "[tex]/action", "[tex]/all-packages", "[tex]/ams", "[tex]/amscd", "[tex]/bbox", "[tex]/boldsymbol", "[tex]/braket", "[tex]/bussproofs", "[tex]/cancel", "[tex]/cases", "[tex]/centernot", "[tex]/color", "[tex]/colortbl", "[tex]/colorv2", "[tex]/configmacros", "[tex]/empheq", "[tex]/enclose", "[tex]/extpfeil", "[tex]/gensymb", "[tex]/html", "[tex]/mathtools", "[tex]/mhchem", "[tex]/newcommand", "[tex]/noerrors", "[tex]/noundefined", "[tex]/physics", "[tex]/require", "[tex]/setoptions", "[tex]/tagformat", "[tex]/textcomp", "[tex]/textmacros", "[tex]/unicode", "[tex]/upgreek", "[tex]/verb", "core", "input/asciimath", "input/mml", "input/tex-base", "input/tex-full", "loader", "output/chtml", "output/chtml/fonts/tex" ].map((function(e) {
+}()), l = c("\nMathJax.loader.preLoad(".concat([ "startup", "[tex]/action", "[tex]/all-packages", "[tex]/ams", "[tex]/amscd", "[tex]/bbox", "[tex]/boldsymbol", "[tex]/braket", "[tex]/bussproofs", "[tex]/cancel", "[tex]/cases", "[tex]/centernot", "[tex]/color", "[tex]/colortbl", "[tex]/colorv2", "[tex]/configmacros", "[tex]/empheq", "[tex]/enclose", "[tex]/extpfeil", "[tex]/gensymb", "[tex]/html", "[tex]/mathtools", "[tex]/mhchem", "[tex]/newcommand", "[tex]/noerrors", "[tex]/noundefined", "[tex]/physics", "[tex]/require", "[tex]/setoptions", "[tex]/tagformat", "[tex]/textcomp", "[tex]/textmacros", "[tex]/unicode", "[tex]/upgreek", "[tex]/verb", "core", "input/asciimath", "input/mml", "input/tex-base", "input/tex-full", "loader", "output/chtml", "output/chtml/fonts/tex" ].map((function(e) {
     return JSON.stringify(e);
 })).join(","), ")\n    "));
 
-var l = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), x = {
+var m = "https://cdn.jsdelivr.net/npm/mathjax@".concat("3.2.0", "/es5"), x = {
     startup: {
         typeset: !1
     },
     loader: {
         load: [],
         paths: {
-            mathjax: l
+            mathjax: m
         }
     }
-}, m = URL.createObjectURL(new Blob([ "\nwindow.MathJax=".concat(JSON.stringify(x), "\n    ") ], {
+}, h = URL.createObjectURL(new Blob([ "\nwindow.MathJax=".concat(JSON.stringify(x), "\n    ") ], {
     type: "application/javascript"
 }));
 
-var h = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(y), d = [ m, y("startup"), f ].concat(r(h));
+var d = [ "core", "input/asciimath", "output/chtml", "input/tex-full", "input/mml", "output/chtml/fonts/tex" ].map(v), y = [ h, v("startup"), l ].concat(r(d));
 
-function y(e) {
-    return l + "/" + e + ".min.js";
-}
-
-function v() {
-    return w.apply(this, arguments);
+function v(e) {
+    return m + "/" + e + ".min.js";
 }
 
 function w() {
-    return (w = t(regeneratorRuntime.mark((function e() {
-        var t, n, o, a, u, c, s, f, l, x, m, h, y;
+    return g.apply(this, arguments);
+}
+
+function g() {
+    return (g = t(regeneratorRuntime.mark((function e() {
+        var t, n, o, a, c, u, i, p, l, m, x, h, d;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
-                return e.next = 2, Promise.all(d.map((function(e) {
-                    return p(e);
+                return e.next = 2, Promise.all(y.map((function(e) {
+                    return f(e);
                 })));
 
               case 2:
@@ -244,7 +253,7 @@ function w() {
                     set MathJax(e) {
                         o = e;
                     }
-                }, u = new Proxy(window, {
+                }, c = new Proxy(window, {
                     get: function(e, t, r) {
                         var n = Reflect.get(a, t, a) || Reflect.get(window, t, window);
                         return "function" == typeof n ? n.bind(window) : n;
@@ -264,7 +273,7 @@ function w() {
                     deleteProperty: function(e, t) {
                         return Reflect.deleteProperty(a, t);
                     }
-                }), c = new Proxy({}, {
+                }), u = new Proxy({}, {
                     get: function(e, t, r) {
                         return Reflect.get(o, t, o);
                     },
@@ -283,19 +292,19 @@ function w() {
                     deleteProperty: function(e, t) {
                         return Reflect.deleteProperty(o, t);
                     }
-                }), s = [ "self", "frames", "parent", "content", "window", "top", "globalThis" ], 
-                f = Object.fromEntries(s.map((function(e) {
-                    return [ e, u ];
+                }), i = [ "self", "frames", "parent", "content", "window", "top", "globalThis" ], 
+                p = Object.fromEntries(i.map((function(e) {
+                    return [ e, c ];
                 }))), l = {
                     value: void 0,
                     mathfontfamily: void 0,
                     mathfontsize: void 0
-                }, x = Object.assign(l, {
-                    MathJax: c
-                }, f), m = Object.keys(x), h = Object.values(x), e.next = 16, i.apply(void 0, r(m).concat([ n ]));
+                }, m = Object.assign(l, {
+                    MathJax: u
+                }, p), x = Object.keys(m), h = Object.values(m), e.next = 16, s.apply(void 0, r(x).concat([ n ]));
 
               case 16:
-                return y = e.sent, Reflect.apply(y, u, h), e.abrupt("return", o);
+                return d = e.sent, Reflect.apply(d, c, h), e.abrupt("return", o);
 
               case 19:
               case "end":
@@ -305,11 +314,11 @@ function w() {
     })))).apply(this, arguments);
 }
 
-var g, b = o(t(regeneratorRuntime.mark((function e() {
+var b, R = a(t(regeneratorRuntime.mark((function e() {
     return regeneratorRuntime.wrap((function(e) {
         for (;;) switch (e.prev = e.next) {
           case 0:
-            return e.abrupt("return", v());
+            return e.abrupt("return", w());
 
           case 1:
           case "end":
@@ -318,30 +327,30 @@ var g, b = o(t(regeneratorRuntime.mark((function e() {
     }), e);
 }))));
 
-function R() {
-    return j.apply(this, arguments);
+function j() {
+    return P.apply(this, arguments);
 }
 
-function j() {
-    return (j = t(regeneratorRuntime.mark((function e() {
+function P() {
+    return (P = t(regeneratorRuntime.mark((function e() {
         var t;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
-                if (!g) {
+                if (!b) {
                     e.next = 2;
                     break;
                 }
-                return e.abrupt("return", g);
+                return e.abrupt("return", b);
 
               case 2:
-                return e.next = 4, b();
+                return e.next = 4, R();
 
               case 4:
                 return t = e.sent, e.next = 7, t.startup.promise;
 
               case 7:
-                return g = t, e.abrupt("return", t);
+                return b = t, e.abrupt("return", t);
 
               case 9:
               case "end":
@@ -351,33 +360,33 @@ function j() {
     })))).apply(this, arguments);
 }
 
-var P = {
+var k = {
     latex: "tex2chtmlPromise",
     asciimath: "asciimath2chtmlPromise",
     mathml: "mathml2chtmlPromise"
 };
 
-function k() {
-    return (k = t(regeneratorRuntime.mark((function e(t, r, n) {
-        var o, a, u, c, i, s = arguments;
+function O() {
+    return (O = t(regeneratorRuntime.mark((function e(t, r, n) {
+        var a, c, u, i, s, p = arguments;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
-                if (o = s.length > 3 && void 0 !== s[3] ? s[3] : {}, a = P[r]) {
+                if (a = p.length > 3 && void 0 !== p[3] ? p[3] : {}, c = k[r]) {
                     e.next = 4;
                     break;
                 }
-                throw new Error("mathtype");
+                throw new Error('mathtype "latex" | "mathml" | "asciimath"');
 
               case 4:
-                return e.next = 6, R();
+                return e.next = 6, j();
 
               case 6:
-                return u = e.sent, u.startup.document.addStyleSheet(), c = Object.assign(u.getMetricsFor(n), o), 
-                e.next = 12, Reflect.apply(Reflect.get(u, a), u, [ t, c ]);
+                return u = e.sent, u.startup.document.addStyleSheet(), i = Object.assign(u.getMetricsFor(n), o, a), 
+                e.next = 12, Reflect.apply(Reflect.get(u, c), u, [ t, i ]);
 
               case 12:
-                i = e.sent, n.appendChild(i), u.startup.document.clear(), u.startup.document.updateDocument();
+                s = e.sent, n.appendChild(s), u.startup.document.clear(), u.startup.document.updateDocument();
 
               case 16:
               case "end":
@@ -387,7 +396,7 @@ function k() {
     })))).apply(this, arguments);
 }
 
-exports.initmathjax = R, exports.rendermath = function(e, t, r) {
-    return k.apply(this, arguments);
+exports.defaultoptions = o, exports.initmathjax = j, exports.rendermath = function(e, t, r) {
+    return O.apply(this, arguments);
 };
 //# sourceMappingURL=index.cjs.map
