@@ -19,16 +19,19 @@ export default defineComponent({
                     | "latex"
                     | "mathml"
                     | "asciimath";
-                const container = document.createElement("div");
+                //  const container = document.createElement("div");
 
-                await rendermath(input.value, language, container);
-                output.value = container.innerHTML;
+                const mathhtml = await rendermath(input.value.trim(), language);
+                output.value = mathhtml;
             },
             500,
             {}
         );
-        watch(input, (input) => {
+        watch(input, (input, oldin) => {
             console.log(input);
+            if (input.trim() === oldin.trim()) {
+                return;
+            }
             onchange();
         });
         onMounted(() => {

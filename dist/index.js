@@ -362,33 +362,35 @@ var P = {
     mathml: "mathml2chtmlPromise"
 };
 
-function O(e, t, n) {
-    return S.apply(this, arguments);
+function O(e, t) {
+    return L.apply(this, arguments);
 }
 
-function S() {
-    return (S = t(regeneratorRuntime.mark((function e(t, n, r) {
-        var a, c, u, i, s, f = arguments;
+function L() {
+    return (L = t(regeneratorRuntime.mark((function e(t, n) {
+        var r, a, c, u, i, s, f = arguments;
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
-                if (a = f.length > 3 && void 0 !== f[3] ? f[3] : {}, c = P[n]) {
-                    e.next = 4;
+                if (r = f.length > 2 && void 0 !== f[2] ? f[2] : document.createElement("div"), 
+                a = f.length > 3 && void 0 !== f[3] ? f[3] : {}, c = P[n]) {
+                    e.next = 5;
                     break;
                 }
                 throw new Error('mathtype "latex" | "mathml" | "asciimath"');
 
-              case 4:
-                return e.next = 6, j();
+              case 5:
+                return e.next = 7, j();
 
-              case 6:
+              case 7:
                 return u = e.sent, u.startup.document.addStyleSheet(), i = Object.assign(u.getMetricsFor(r), o, a), 
-                e.next = 12, Reflect.apply(Reflect.get(u, c), u, [ t, i ]);
+                e.next = 13, Reflect.apply(Reflect.get(u, c), u, [ t.trim(), i ]);
 
-              case 12:
-                s = e.sent, r.appendChild(s), u.startup.document.clear(), u.startup.document.updateDocument();
+              case 13:
+                return s = e.sent, r.appendChild(s), u.startup.document.clear(), u.startup.document.updateDocument(), 
+                e.abrupt("return", r.innerHTML);
 
-              case 16:
+              case 18:
               case "end":
                 return e.stop();
             }

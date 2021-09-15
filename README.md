@@ -63,9 +63,11 @@ https://github.com/masx200/mathjax-module-async/blob/master/lib/index.d.ts
 
 `type`：数学公式使用的语言是` "latex" | "mathml" | "asciimath"`之一
 
-`container`:要渲染数学到的容器
+`container`:可选参数，要渲染数学到的容器
 
-`opts`:传递给渲染函数`mathml2chtmlPromise,asciimath2chtmlPromise,tex2chtmlPromise`之一的参数，可以通过`MathJax.getMetricsFor`获取
+`opts`:可选参数，传递给渲染函数`mathml2chtmlPromise,asciimath2chtmlPromise,tex2chtmlPromise`之一的参数，可以通过`MathJax.getMetricsFor`获取
+
+返回值为`Promise<string>`,渲染后的数学公式的`html`文本。
 
 ## initmathjax
 

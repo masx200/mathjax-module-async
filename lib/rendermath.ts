@@ -5,9 +5,9 @@ export type MathjaxInputType = "latex" | "mathml" | "asciimath";
 export async function rendermath(
     input: string,
     type: MathjaxInputType,
-    container: HTMLElement,
+    container: HTMLElement = document.createElement("div"),
     opts: Record<string, any> = {}
-): Promise<void> {
+): Promise<string> {
     const renderfun = mathrenderfuns[type];
 
     if (!renderfun) {
@@ -23,7 +23,7 @@ export async function rendermath(
     );
 
     const node = await Reflect.apply(Reflect.get(MathJax, renderfun), MathJax, [
-        input,
+        input.trim(),
         options,
     ]);
 
@@ -31,4 +31,6 @@ export async function rendermath(
 
     MathJax.startup.document.clear();
     MathJax.startup.document.updateDocument();
+
+    return container.innerHTML;
 }
