@@ -33,13 +33,13 @@ function createcontainers() {
 }
 
 async function start() {
-//const { container1, container2, container3 } = createcontainers();
+    //const { container1, container2, container3 } = createcontainers();
 
     // console.time('1')
     const MathJax = await initmathjax();
     console.log(MathJax);
     // console.timeEnd('1')
-const { container1, container2, container3 } = createcontainers();
+    const { container1, container2, container3 } = createcontainers();
 
     await Promise.all([
         rendermath(asciimathinput, "asciimath", container1),

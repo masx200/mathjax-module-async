@@ -4,6 +4,7 @@ import path from "path";
 import VitePluginElementPlus from "vite-plugin-element-plus";
 export default defineConfig({
     build: {
+        target: "es2015",
         terserOptions: {
             compress: { drop_console: true, drop_debugger: true },
         },
