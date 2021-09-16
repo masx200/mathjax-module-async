@@ -6,7 +6,7 @@ export async function rendermath(
     input: string,
     type: MathjaxInputType,
     container: HTMLElement = document.createElement("div"),
-    opts: Record<string, any> = {}
+    opts:Partial< Record<string, any> &typeof defaultoptions> = {}
 ): Promise<string> {
     const renderfun = mathrenderfuns[type];
 
