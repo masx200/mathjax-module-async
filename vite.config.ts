@@ -11,6 +11,10 @@ export default defineConfig({
             compress: { drop_console: true, drop_debugger: true },
         },
     },
-    plugins: [minifyHtml({removeAttributeQuotes:false,}), vue(), VitePluginElementPlus({})],
+    plugins: [
+        minifyHtml({ removeAttributeQuotes: false }),
+        vue(),
+        VitePluginElementPlus({}),
+    ],
     root: path.resolve(__dirname, "test"),
 });

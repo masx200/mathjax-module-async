@@ -19,7 +19,6 @@ export default defineComponent({
                     | "latex"
                     | "mathml"
                     | "asciimath";
-                //  const container = document.createElement("div");
 
                 const mathhtml = await rendermath(input.value.trim(), language);
                 output.value = mathhtml;

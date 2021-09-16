@@ -33,18 +33,21 @@ function createcontainers() {
 }
 
 async function start() {
-    //const { container1, container2, container3 } = createcontainers();
-
-    // console.time('1')
     const MathJax = await initmathjax();
     console.log(MathJax);
     // console.timeEnd('1')
     const { container1, container2, container3 } = createcontainers();
 
     await Promise.all([
-        rendermath(asciimathinput, "asciimath", container1),
-        rendermath(latexinput, "latex", container2),
-        rendermath(mathmlinput, "mathml", container3),
+        rendermath(asciimathinput, "asciimath").then(
+            (html) => (container1.innerHTML = html)
+        ),
+        rendermath(latexinput, "latex").then(
+            (html) => (container2.innerHTML = html)
+        ),
+        rendermath(mathmlinput, "mathml").then(
+            (html) => (container3.innerHTML = html)
+        ),
     ]);
 }
 start();

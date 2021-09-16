@@ -372,8 +372,8 @@ function O() {
         return regeneratorRuntime.wrap((function(e) {
             for (;;) switch (e.prev = e.next) {
               case 0:
-                if (n = p.length > 2 && void 0 !== p[2] ? p[2] : document.createElement("div"), 
-                a = p.length > 3 && void 0 !== p[3] ? p[3] : {}, u = k[r]) {
+                if (n = p.length > 2 && void 0 !== p[2] ? p[2] : {}, a = document.createElement("div"), 
+                u = k[r]) {
                     e.next = 5;
                     break;
                 }
@@ -383,12 +383,12 @@ function O() {
                 return e.next = 7, j();
 
               case 7:
-                return c = e.sent, c.startup.document.addStyleSheet(), i = Object.assign(c.getMetricsFor(n), o, a), 
+                return c = e.sent, c.startup.document.addStyleSheet(), i = Object.assign({}, o, n), 
                 e.next = 13, Reflect.apply(Reflect.get(c, u), c, [ t.trim(), i ]);
 
               case 13:
-                return s = e.sent, n.appendChild(s), c.startup.document.clear(), c.startup.document.updateDocument(), 
-                e.abrupt("return", n.innerHTML);
+                return s = e.sent, a.appendChild(s), c.startup.document.clear(), c.startup.document.updateDocument(), 
+                e.abrupt("return", a.innerHTML);
 
               case 18:
               case "end":
