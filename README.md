@@ -57,7 +57,7 @@ https://github.com/masx200/mathjax-module-async/blob/master/dist/index.d.ts
 
 ## rendermath
 
-异步方法,把输入的 数学 格式的文字渲染到元素，并添加到容器中
+异步方法,把输入的 数学 格式的文字渲染,并返回 html 字符串。
 
 参数：`input`:数学公式的文本内容
 
