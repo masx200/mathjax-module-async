@@ -1,10 +1,11 @@
 import babel from "@rollup/plugin-babel";
-import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
 import json from "@rollup/plugin-json";
+import resolve from "@rollup/plugin-node-resolve";
+import { defineConfig } from "rollup";
+import rollupExternalModules from "rollup-external-modules";
+import { terser } from "rollup-plugin-terser";
 import typescript from "rollup-plugin-ts";
-
 const dropcompressplugin = terser({
     //    sourcemap: true,
     toplevel: true,
@@ -18,41 +19,46 @@ const dropcompressplugin = terser({
     },
     mangle: { properties: false },
 });
+const plugins = [
+    typescript(),
+    resolve(),
+    commonjs(),
+    json(),
+    babel({
+        sourceMaps: true,
+        plugins: [],
+        babelHelpers: "bundled",
+        presets: [["@babel/preset-env", { useBuiltIns: "entry", corejs: "2" }]],
+        extensions: [".js", ".ts"],
+    }),
 
-export default [
+    dropcompressplugin,
+];
+
+export default defineConfig([
     {
+        external: rollupExternalModules,
         input: "./lib/index.ts",
+        output: [
+            {
+                banner: "import regeneratorRuntime from 'regenerator-runtime';",
+                file: "./dist/index.js",
+                format: "esm",
+                sourcemap: true,
+            },
+        ],
+        plugins,
+    },
+    {
+        external: rollupExternalModules,
+        input: "./dist/index.js",
         output: [
             {
                 file: "./dist/index.cjs",
                 format: "cjs",
                 sourcemap: true,
             },
-            {
-                file: "./dist/index.js",
-                format: "esm",
-                sourcemap: true,
-            },
         ],
-        plugins: [
-            typescript(),
-            resolve(),
-            commonjs(),
-            json(),
-            babel({
-                sourceMaps: true,
-                plugins: [],
-                babelHelpers: "bundled",
-                presets: [
-                    [
-                        "@babel/preset-env",
-                        { useBuiltIns: "entry", corejs: "2" },
-                    ],
-                ],
-                extensions: [".js", ".ts"],
-            }),
-
-            dropcompressplugin,
-        ],
+        plugins,
     },
-];
+]);

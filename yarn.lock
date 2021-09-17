@@ -2397,15 +2397,10 @@ regenerate@^1.4.0:
   resolved "https://registry.nlark.com/regenerate/download/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
   integrity sha1-uTRtiCfo9aMve6KWN9OYtpAUhIo=
 
-regenerator-runtime@^0.13.4:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
   version "0.13.9"
   resolved "https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fregenerator-runtime%2Fdownload%2Fregenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
-
-regenerator-runtime@^0.13.9:
-  version "0.13.9"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
-  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 regenerator-transform@^0.14.2:
   version "0.14.5"
@@ -2463,6 +2458,11 @@ resolve@^1.14.2, resolve@^1.17.0, resolve@^1.19.0, resolve@^1.20.0:
   dependencies:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
+
+rollup-external-modules@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.nlark.com/rollup-external-modules/download/rollup-external-modules-2.0.0.tgz#b6a83e61fe483462260c4134f7d201906d47737c"
+  integrity sha1-tqg+Yf5INGImDEE099IBkG1Hc3w=
 
 rollup-plugin-terser@^7.0.2:
   version "7.0.2"
