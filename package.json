@@ -1,10 +1,18 @@
 {
+    "files": [
+        "dist/index.d.ts",
+        "dist/index.js",
+        "dist/index.cjs"
+    ],
+    "dependencies": {
+        "regenerator-runtime": "^0.13.9"
+    },
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
     },
     "name": "@masx200/mathjax-module-async",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
     "main": "dist/index.cjs",
     "module": "dist/index.js",
@@ -57,7 +65,5 @@
         "type": "git",
         "url": "https://github.com/masx200/mathjax-module-async"
     },
-    "peerDependencies": {
-        "regenerator-runtime": "^0.13.9"
-    }
+    "peerDependencies": {}
 }
