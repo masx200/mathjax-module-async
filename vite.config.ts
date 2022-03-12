@@ -7,6 +7,7 @@ import { minifyHtml } from "vite-plugin-html";
 export default defineConfig({
     esbuild: { drop: ["console", "debugger"] },
     build: {
+        minify: "esbuild",
         target: "es2015",
         terserOptions: {
             compress: { drop_console: true, drop_debugger: true },
