@@ -5,6 +5,7 @@ import VitePluginElementPlus from "vite-plugin-element-plus";
 import { minifyHtml } from "vite-plugin-html";
 
 export default defineConfig({
+    esbuild: { drop: ["console", "debugger"] },
     build: {
         target: "es2015",
         terserOptions: {
