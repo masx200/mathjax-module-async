@@ -1,6 +1,7 @@
 //@ts-ignore
 import init_mathjax_fun from "virtual:mathjax_init-js";
 import { accidentallyvariables } from "./accidentallyvariables";
+import { equalglobals } from "./equalglobals";
 import { likewindow } from "./likewindow";
 export async function loadmodules(): Promise<Record<string, any>> {
     // const scriptscontent = await get_script_content();
@@ -79,6 +80,13 @@ export async function loadmodules(): Promise<Record<string, any>> {
             },
         }
     );
+    const likewindow = Object.fromEntries(
+        equalglobals
+            // Reflect.ownKeys(window)
+            //     .filter((k) => Object.is(window, Reflect.get(window, k)))
+            .map((k) => [k, global])
+    );
+
     const scope = Object.assign(
         accidentallyvariables,
 

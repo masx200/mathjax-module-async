@@ -24,8 +24,8 @@ export default function virtual_plugin_for_mathjax_init({
             }
             return null; // other ids should be handled as usually
         },
-        async load(id) {
-            if (id === id) {
+        async load(source) {
+            if (source === id) {
                 const scriptscontent = await get_script_content();
                 const scriptbody = scriptscontent.join("\n;\n");
                 const result = await get_function_mathjax_module_init(
