@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
-import VitePluginElementPlus from "vite-plugin-element-plus";
+// import VitePluginElementPlus from "vite-plugin-element-plus";
 import { minifyHtml } from "vite-plugin-html";
-
+import ElementPlus from "unplugin-element-plus/vite";
 export default defineConfig({
     esbuild: { drop: ["console", "debugger"] },
     build: {
@@ -14,9 +14,12 @@ export default defineConfig({
         },
     },
     plugins: [
+        ElementPlus({
+            // options
+        }),
         minifyHtml({ removeAttributeQuotes: false }),
         vue(),
-        VitePluginElementPlus({}),
+        // VitePluginElementPlus({}),
     ],
     root: path.resolve(__dirname, "test"),
 });
