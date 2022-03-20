@@ -1,4 +1,8 @@
 {
+    // "exclude": [
+    //     "node_modules",
+    //     "virtual:mathjax_init.js"
+    // ],
     "include": [
         "test/shims.d.ts",
         "*.ts",
@@ -8,7 +12,12 @@
         "test/*.ts"
     ],
     "compilerOptions": {
-        "types": ["vite/client"],
+        "noEmit": true,
+        "types": [
+            "vite/client"
+        ],
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
         "sourceMap": false,
         "inlineSourceMap": false,
         "pretty": true,

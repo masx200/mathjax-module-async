@@ -13,12 +13,19 @@ const mathjaxmodules = [
     "output/chtml/fonts/tex",
 ];
 const mathjaxurls = mathjaxmodules.map(getrealmoduleurl);
-export const scriptstoload = [
+const urls_of_mathjax: {
+    type: "url";
+    content: string;
+}[] = mathjaxurls.map((a) => ({ type: "url", content: a }));
+export const scriptstoload: {
+    type: "string" | "url";
+    content: string;
+}[] = [
     configscript,
 
-    getrealmoduleurl("startup"),
+    { type: "url", content: getrealmoduleurl("startup") },
     preloadscript,
-    ...mathjaxurls,
+    ...urls_of_mathjax,
 ];
 
 function getrealmoduleurl(value: string): string {

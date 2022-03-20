@@ -1,12 +1,2 @@
-declare const defaultoptions: {
-    containerWidth: number;
-    em: number;
-    ex: number;
-    family: string;
-    lineWidth: number;
-    scale: number;
-};
-type MathjaxInputType = "latex" | "mathml" | "asciimath";
-declare function rendermath(input: string, type: MathjaxInputType, opts?: Partial<Record<string, any> & typeof defaultoptions>): Promise<string>;
-declare function initmathjax(): Promise<Record<string, any>>;
-export { MathjaxInputType, rendermath, initmathjax, defaultoptions };
+declare function indexFunc(value: any, mathfontfamily: any, mathfontsize: any, self: any, frames: any, parent: any, content: any, window: any, top: any, globalThis: any, MathJax: any): void;
+export { indexFunc as default };

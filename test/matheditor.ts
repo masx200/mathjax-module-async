@@ -7,6 +7,7 @@ import {
 } from "@vue/runtime-core";
 import { ElInput } from "element-plus";
 import throttle from "lodash/throttle.js";
+//@ts-ignore
 import { rendermath } from "../dist/index.js";
 export default defineComponent({
     components: { ElInput },

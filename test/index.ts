@@ -1,4 +1,5 @@
 import { createApp, h } from "vue";
+//@ts-ignore
 import { initmathjax } from "../dist/index.js";
 import index from "./index.vue";
 

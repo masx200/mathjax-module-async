@@ -1,5 +1,5 @@
 {
-    "version": "1.4.4",
+    "version": "1.4.5",
     "files": [
         "dist/index.d.ts",
         "dist/index.js",
@@ -18,8 +18,11 @@
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "rollup -c rollup.config.js",
-        "format": " npx prettier --write */*.html */*.js */*.css *.json */*.ts *.md *.js */*.vue *.ts",
+        "check": "tsc --noEmit",
+        "build": " tsc --noEmit && npm run build1 && npm run build2",
+        "build2": "rollup -c rollup.config-2.mjs",
+        "build1": "rollup -c rollup.config-1.js",
+        "format": " npx prettier --write */*.html */*.js  *.json */*.ts *.md *.js */*.vue *.ts",
         "dev": "vite --config vite.config.ts ",
         "prod": "vite build --config vite.config.ts"
     },
@@ -43,13 +46,14 @@
         "core-js": "2",
         "element-plus": "^1.1.0-beta.12",
         "lodash": "^4.17.21",
+        "node-fetch": "^3.2.3",
         "prettier": "^2.3.2",
         "regenerator-runtime": "^0.13.9",
         "rollup": "^2.70.1",
         "rollup-external-modules": "^2.0.0",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-ts": "^2.0.5",
-        "tslib": "^2.3.0",
+        "tslib": "^2.3.1",
         "typescript": "^4.6.2",
         "unplugin-element-plus": "^0.3.2",
         "vite": "^2.8.4",

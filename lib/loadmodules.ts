@@ -1,15 +1,19 @@
-import { createfunction } from "./createfunction";
-import { fetchsource } from "./fetchsource";
-import { scriptstoload } from "./scriptstoload";
-
+//@ts-ignore
+import init_mathjax_fun from "virtual:mathjax_init-js";
+import { accidentallyvariables } from "./accidentallyvariables";
+import { likewindow } from "./likewindow";
 export async function loadmodules(): Promise<Record<string, any>> {
-    const scriptscontent = await Promise.all(
-        scriptstoload.map((u) => fetchsource(u))
-    );
-    // console.log(scriptscontent);
+    // const scriptscontent = await get_script_content();
+    // const scriptbody = scriptscontent.join("\n;\n");
+    // three global variables are accidentally defined
+    //https://github.com/mathjax/MathJax/issues/2748
 
-    const scriptbody = scriptscontent.join("\n;\n");
-    // console.log(scriptbody);
+    // const scope = Object.assign(
+    //     accidentallyvariables,
+    //     { MathJax: proxymathjax },
+    //     likewindow
+    // );
+    // const argskey = Object.keys(scope);
 
     let MathJax: Record<string, any> = {};
     const fake = {
@@ -75,37 +79,16 @@ export async function loadmodules(): Promise<Record<string, any>> {
             },
         }
     );
-    const equalglobals = [
-        "self",
-        "frames",
-        "parent",
-        "content",
-        "window",
-        "top",
-        "globalThis",
-    ];
-    const likewindow = Object.fromEntries(
-        equalglobals
-            // Reflect.ownKeys(window)
-            //     .filter((k) => Object.is(window, Reflect.get(window, k)))
-            .map((k) => [k, global])
-    );
-    // three global variables are accidentally defined
-    //https://github.com/mathjax/MathJax/issues/2748
-    const accidentallyvariables = {
-        value: undefined,
-        mathfontfamily: undefined,
-        mathfontsize: undefined,
-    };
     const scope = Object.assign(
         accidentallyvariables,
-        { MathJax: proxymathjax },
-        likewindow
+
+        likewindow,
+        { MathJax: proxymathjax }
     );
-    const argskey = Object.keys(scope);
     const argsvalue = Object.values(scope);
-    const fun = await createfunction(...argskey, scriptbody);
+    // const fun = await createfunction(...argskey, scriptbody);
     // const fun = new Function(...argskey, scriptbody);
+    const fun = init_mathjax_fun;
     Reflect.apply(fun, global, argsvalue);
     // console.info.call(console, global);
     return MathJax;

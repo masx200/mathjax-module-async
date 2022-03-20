@@ -1,6 +1,6 @@
 import { loadmathjax } from "./loadmathjax.js";
 let MathJaxcache: Record<string, any> | undefined;
-export async function initmathjax() {
+export async function initmathjax(): Promise<Record<string, any>> {
     if (MathJaxcache) {
         return MathJaxcache;
     }
