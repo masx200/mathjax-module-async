@@ -25,10 +25,10 @@ export default defineConfig(async ({ mode, command }) => {
             },
         },
         plugins: [
+            checker({ typescript: { root: path.resolve(__dirname) } }),
             //@ts-ignore
             virtual_plugin_for_mathjax_init({ id: id_of_virtual_mathjax_init }),
-            checker({ vueTsc:true}),
-            checker({ typescript: { root: path.resolve(__dirname) } }),
+            checker({ vueTsc: true }),
 
             ElementPlus({
                 // options
