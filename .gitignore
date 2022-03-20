@@ -85,3 +85,5 @@ test/dist/
 .yarn/install-state.gz
 *.zip
 dist/index.cjs
+dist/index.cjs
+dist/index.js

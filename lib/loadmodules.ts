@@ -2,7 +2,7 @@
 import init_mathjax_fun from "virtual:mathjax_init-js";
 import { accidentallyvariables } from "./accidentallyvariables";
 import { equalglobals } from "./equalglobals";
-import { likewindow } from "./likewindow";
+// import { likewindow } from "./likewindow";
 export async function loadmodules(): Promise<Record<string, any>> {
     // const scriptscontent = await get_script_content();
     // const scriptbody = scriptscontent.join("\n;\n");
@@ -101,3 +101,4 @@ export async function loadmodules(): Promise<Record<string, any>> {
     // console.info.call(console, global);
     return MathJax;
 }
+console.log(init_mathjax_fun);

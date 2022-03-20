@@ -42,10 +42,15 @@ const plugins = [
 
     dropcompressplugin,
 ];
-
+function external(source, importer, isResolved) {
+    if (id_of_virtual_mathjax_init === source) {
+        return false;
+    }
+    return rollupExternalModules(source);
+}
 export default defineConfig([
     {
-        external: rollupExternalModules,
+        external: external,
         input: "./lib/index.ts",
         output: [
             {
@@ -61,7 +66,7 @@ export default defineConfig([
         ],
     },
     {
-        external: rollupExternalModules,
+        external: external,
         input: "./dist/index.js",
         output: [
             {
