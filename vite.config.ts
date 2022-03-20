@@ -1,12 +1,13 @@
-const id_of_virtual_mathjax_init = "virtual:mathjax_init-js";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 import ElementPlus from "unplugin-element-plus/vite";
 import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
 // import VitePluginElementPlus from "vite-plugin-element-plus";
 import { minifyHtml } from "vite-plugin-html";
 //@ts-ignore
 import virtual_plugin_for_mathjax_init from "./dist/virtual_plugin_for_mathjax_init.mjs";
+const id_of_virtual_mathjax_init = "virtual:mathjax_init-js";
 export default defineConfig(async ({ mode, command }) => {
     console.log(mode, command);
     // //@ts-ignore
@@ -26,6 +27,9 @@ export default defineConfig(async ({ mode, command }) => {
         plugins: [
             //@ts-ignore
             virtual_plugin_for_mathjax_init({ id: id_of_virtual_mathjax_init }),
+            checker({ vueTsc:true}),
+            checker({ typescript: { root: path.resolve(__dirname) } }),
+
             ElementPlus({
                 // options
             }),
