@@ -1,9 +1,12 @@
-import { defineConfig } from "vite";
+const id_of_virtual_mathjax_init = "virtual:mathjax_init-js";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+import ElementPlus from "unplugin-element-plus/vite";
+import { defineConfig } from "vite";
 // import VitePluginElementPlus from "vite-plugin-element-plus";
 import { minifyHtml } from "vite-plugin-html";
-import ElementPlus from "unplugin-element-plus/vite";
+//@ts-ignore
+import virtual_plugin_for_mathjax_init from "./dist/virtual_plugin_for_mathjax_init.mjs";
 export default defineConfig({
     esbuild: { drop: ["console", "debugger"] },
     build: {
@@ -14,6 +17,7 @@ export default defineConfig({
         },
     },
     plugins: [
+        virtual_plugin_for_mathjax_init({ id: id_of_virtual_mathjax_init }),
         ElementPlus({
             // options
         }),
@@ -23,3 +27,4 @@ export default defineConfig({
     ],
     root: path.resolve(__dirname, "test"),
 });
+

@@ -1,4 +1,5 @@
-import { rendermath, initmathjax } from "../dist/index.js";
+//@ts-ignore
+import { rendermath, initmathjax } from "../lib/index";
 import { latexinput } from "./latexinput.js";
 import { mathmlinput } from "./mathmlinput.js";
 import { asciimathinput } from "./asciimathinput.js";

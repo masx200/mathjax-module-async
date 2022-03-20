@@ -1,6 +1,6 @@
 import { createApp, h } from "vue";
 //@ts-ignore
-import { initmathjax } from "../dist/index.js";
+import { initmathjax } from "../lib/index";
 import index from "./index.vue";
 
 const app = createApp({

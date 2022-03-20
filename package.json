@@ -23,8 +23,8 @@
         "build2": "rollup -c rollup.config-2.mjs",
         "build1": "rollup -c rollup.config-1.js",
         "format": " npx prettier --write */*.html */*.js  *.json */*.ts *.md *.js */*.vue *.ts",
-        "dev": "vite --config vite.config.ts ",
-        "prod": "vite build --config vite.config.ts"
+        "dev": "npm run build1 && vite --config vite.config.ts ",
+        "prod": "npm run build1 && vite build --config vite.config.ts"
     },
     "keywords": [],
     "author": "",

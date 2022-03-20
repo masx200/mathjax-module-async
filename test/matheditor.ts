@@ -8,7 +8,7 @@ import {
 import { ElInput } from "element-plus";
 import throttle from "lodash/throttle.js";
 //@ts-ignore
-import { rendermath } from "../dist/index.js";
+import { rendermath } from "../lib/index";
 export default defineComponent({
     components: { ElInput },
     setup(props) {
