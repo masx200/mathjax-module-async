@@ -57,16 +57,17 @@ export default defineConfig([
             // virtual_plugin_for_mathjax_init({ id: "virtual:mathjax_init.js" }),
         ],
     },
-    // {
-    //     external: rollupExternalModules,
-    //     input: "./dist/index.js",
-    //     output: [
-    //         {
-    //             file: "./dist/index.cjs",
-    //             format: "cjs",
-    //             sourcemap: true,
-    //         },
-    //     ],
-    //     plugins,
-    // },
+    {
+        external: rollupExternalModules,
+        input: "./dist/virtual_plugin_for_mathjax_init.mjs",
+        output: [
+            {
+                exports: "auto",
+                file: "./dist/virtual_plugin_for_mathjax_init.cjs",
+                format: "cjs",
+                sourcemap: true,
+            },
+        ],
+        plugins,
+    },
 ]);

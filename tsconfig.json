@@ -13,9 +13,7 @@
     ],
     "compilerOptions": {
         "noEmit": true,
-        "types": [
-            "vite/client"
-        ],
+        "types": ["vite/client"],
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
         "sourceMap": false,
