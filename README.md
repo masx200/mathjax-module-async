@@ -53,7 +53,7 @@ import { rendermath, initmathjax } from "@masx200/mathjax-module-async";
 
 类型声明文件
 
-https://github.com/masx200/mathjax-module-async/blob/master/dist/index.d.ts
+https://github.com/masx200/mathjax-module-async/blob/master/lib/index.ts
 
 ## rendermath
 
