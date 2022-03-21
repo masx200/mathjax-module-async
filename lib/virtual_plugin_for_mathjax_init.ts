@@ -13,19 +13,17 @@ export default function virtual_plugin_for_mathjax_init({
 }: {
     id: string;
 }): Plugin {
-    // if (typeof fetch !== "function") {
-    //     Reflect.set(globalThis, "fetch", fetch);
-    // }
+    const resolvedvirtual="\0"+id+"\0";
     return {
         name: "virtual_plugin_for_mathjax_init", // this name will show up in warnings and errors
         resolveId(source) {
             if (source === id) {
-                return source; // this signals that rollup should not ask other plugins or check the file system to find this id
+                return resolvedvirtual; // this signals that rollup should not ask other plugins or check the file system to find this id
             }
             return null; // other ids should be handled as usually
         },
         async load(source) {
-            if (source === id) {
+            if (source === resolvedvirtual) {
                 const scriptscontent = await get_script_content();
                 const scriptbody = scriptscontent.join("\n;\n");
                 const result = await get_function_mathjax_module_init(
