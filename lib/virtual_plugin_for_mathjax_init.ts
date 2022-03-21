@@ -13,7 +13,7 @@ export default function virtual_plugin_for_mathjax_init({
 }: {
     id: string;
 }): Plugin {
-    const resolvedvirtual="\0"+id+"\0";
+    const resolvedvirtual = "\0" + id;
     return {
         name: "virtual_plugin_for_mathjax_init", // this name will show up in warnings and errors
         resolveId(source) {
