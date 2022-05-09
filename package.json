@@ -67,11 +67,8 @@
         "debug": "4.3.2",
         "object-path": "0.11.8",
         "nanoid": "3.3.1",
-        "minimist": "1.2.6"
-    },
-    "directories": {
-        "lib": "lib",
-        "test": "test"
+        "minimist": "1.2.6",
+        "async": "3.2.3"
     },
     "repository": {
         "type": "git",
