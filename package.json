@@ -46,7 +46,7 @@
         "core-js": "2",
         "element-plus": "^1.1.0-beta.12",
         "lodash": "^4.17.21",
-        "node-fetch": "2",
+        "node-fetch": "3",
         "prettier": "^2.3.2",
         "regenerator-runtime": "^0.13.9",
         "rollup": "^2.70.1",
