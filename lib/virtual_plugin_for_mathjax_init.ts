@@ -1,4 +1,4 @@
-// import fetch from "node-fetch";
+
 import type { Plugin } from "rollup";
 import { argskey } from "./argskey";
 import { get_function_mathjax_module_init } from "./get_function_mathjax_module_init";
