@@ -45,7 +45,7 @@ export default defineConfig([
             {
                 banner: [
                     "import regeneratorRuntime from 'regenerator-runtime';",
-                    `import fetch from "node-fetch";`,
+                    `import fetch from "cross-fetch";`,
                 ].join("\n"),
                 file: "./dist/virtual_plugin_for_mathjax_init.mjs",
                 format: "esm",
