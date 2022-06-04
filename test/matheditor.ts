@@ -8,7 +8,7 @@ import {
 import { ElInput } from "element-plus";
 import throttle from "lodash/throttle.js";
 //@ts-ignore
-import { rendermath } from "../lib/index";
+import { rendermath, initmathjax } from "../lib/index";
 export default defineComponent({
     components: { ElInput },
     setup(props) {
@@ -21,7 +21,11 @@ export default defineComponent({
                     | "mathml"
                     | "asciimath";
 
-                const mathhtml = await rendermath(input.value.trim(), language);
+                const mathhtml = await rendermath(
+                    await initmathjax(),
+                    input.value.trim(),
+                    language
+                );
                 output.value = mathhtml;
             },
             500,

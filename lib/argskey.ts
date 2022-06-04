@@ -1,8 +1,17 @@
-import { accidentallyvariables } from "./accidentallyvariables";
-import { equalglobals } from "./equalglobals";
+// import { accidentallyvariables } from "./accidentallyvariables";
+// import { equalglobals } from "./equalglobals";
 
 export const argskey = [
-    Object.keys(accidentallyvariables),
-    equalglobals,
+    "value",
+    "mathfontfamily",
+    "mathfontsize",
+    "self",
+    "frames",
+    "parent",
+    "content",
+    "window",
+    "top",
+    "globalThis",
     "MathJax",
-].flat();
+    "baseurl",
+];

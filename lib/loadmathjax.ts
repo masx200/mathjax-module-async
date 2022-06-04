@@ -7,9 +7,9 @@
 //     }
 //     window.MathJax = config;
 // }
-import { cachepromise } from "./cachepromise";
+// import { cachepromise } from "./cachepromise";
 import { loadmodules } from "./loadmodules";
-export const loadmathjax = cachepromise(async function () {
+export const loadmathjax = /* cachepromise */ async function (baseurl: string) {
     //  await loadsheet(mathjaxcss);
-    return loadmodules();
-});
+    return loadmodules(baseurl);
+};

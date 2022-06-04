@@ -1,4 +1,4 @@
-import { config } from "./config";
+import { get_config } from "./config";
 
 // export const configscript = URL.createObjectURL(
 //     new Blob([getmathjaxafter()], { type: "application/javascript" })
@@ -9,6 +9,6 @@ export const configscript: { type: "string"; content: string } = {
 };
 function getmathjaxafter() {
     return `
-window.MathJax=${JSON.stringify(config)}
+window.MathJax=${get_config.toString()}(baseurl);
     `;
 }

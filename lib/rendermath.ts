@@ -1,8 +1,9 @@
 import { defaultoptions } from "./defaultoptions";
-import { initmathjax } from "./initmathjax.js";
+// import { initmathjax } from "./initmathjax.js";
 import { mathrenderfuns } from "./mathrenderfuns";
 export type MathjaxInputType = "latex" | "mathml" | "asciimath";
 export async function rendermath(
+    MathJax: Record<string, any>,
     input: string,
     type: MathjaxInputType,
     opts: Partial<Record<string, any> & typeof defaultoptions> = {}
@@ -14,7 +15,7 @@ export async function rendermath(
     if (!renderfun) {
         throw new Error("mathtype" + ` "latex" | "mathml" | "asciimath"`);
     }
-    const MathJax = await initmathjax();
+    // const MathJax = await initmathjax();
     const mathjax = MathJax;
     mathjax.startup.document.addStyleSheet();
     const options = Object.assign({}, defaultoptions, opts);

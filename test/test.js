@@ -40,13 +40,13 @@ async function start() {
     const { container1, container2, container3 } = createcontainers();
 
     await Promise.all([
-        rendermath(asciimathinput, "asciimath").then(
+        rendermath(MathJax, asciimathinput, "asciimath").then(
             (html) => (container1.innerHTML = html)
         ),
-        rendermath(latexinput, "latex").then(
+        rendermath(MathJax, latexinput, "latex").then(
             (html) => (container2.innerHTML = html)
         ),
-        rendermath(mathmlinput, "mathml").then(
+        rendermath(MathJax, mathmlinput, "mathml").then(
             (html) => (container3.innerHTML = html)
         ),
     ]);

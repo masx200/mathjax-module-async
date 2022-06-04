@@ -29,6 +29,6 @@ export const scriptstoload: {
 ];
 
 function getrealmoduleurl(value: string): string {
-    return mathjaxbase + "/" + value + ".min.js";
+    return mathjaxbase + "/" + value + ".js";
 }
 // console.log(scriptstoload);

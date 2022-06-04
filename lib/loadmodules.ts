@@ -1,9 +1,11 @@
 //@ts-ignore
 import init_mathjax_fun from "virtual:mathjax_init-js";
-import { accidentallyvariables } from "./accidentallyvariables";
-import { equalglobals } from "./equalglobals";
+// import { accidentallyvariables } from "./accidentallyvariables";
+// import { equalglobals } from "./equalglobals";
 // import { likewindow } from "./likewindow";
-export async function loadmodules(): Promise<Record<string, any>> {
+export async function loadmodules(
+    baseurl: string
+): Promise<Record<string, any>> {
     // const scriptscontent = await get_script_content();
     // const scriptbody = scriptscontent.join("\n;\n");
     // three global variables are accidentally defined
@@ -79,21 +81,34 @@ export async function loadmodules(): Promise<Record<string, any>> {
                 return Reflect.deleteProperty(MathJax, p);
             },
         }
-    );
-    const likewindow = Object.fromEntries(
-        equalglobals
-            // Reflect.ownKeys(window)
-            //     .filter((k) => Object.is(window, Reflect.get(window, k)))
-            .map((k) => [k, global])
-    );
+    ) as Record<string, any>;
+    // const likewindow = Object.fromEntries(
+    //     equalglobals
+    //         // Reflect.ownKeys(window)
+    //         //     .filter((k) => Object.is(window, Reflect.get(window, k)))
+    //         .map((k) => [k, global])
+    // );
 
-    const scope = Object.assign(
-        accidentallyvariables,
+    // const scope = Object.assign(
+    //     accidentallyvariables,
 
-        likewindow,
-        { MathJax: proxymathjax }
-    );
-    const argsvalue = Object.values(scope);
+    //     likewindow,
+    //     { MathJax: proxymathjax }
+    // );
+    const argsvalue = [
+        undefined,
+        undefined,
+        undefined,
+        global,
+        global,
+        global,
+        global,
+        global,
+        global,
+        global,
+        proxymathjax,
+        baseurl,
+    ]; // Object.values(scope);
     // const fun = await createfunction(...argskey, scriptbody);
     // const fun = new Function(...argskey, scriptbody);
     const fun = init_mathjax_fun;

@@ -1,5 +1,5 @@
 {
-    "version": "1.4.6",
+    "version": "1.5.0",
     "files": [
         "dist/index.d.ts",
         "dist/index.js",
@@ -10,7 +10,7 @@
     },
     "publishConfig": {
         "access": "public",
-        "registry": "https://registry.npmjs.org/"
+        "registry": "https://registry.npmjs.com/"
     },
     "name": "@masx200/mathjax-module-async",
     "description": "把mathjax转化成模块形式异步加载导出,并且不会污染全局变量",
