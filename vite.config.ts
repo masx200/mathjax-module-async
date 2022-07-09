@@ -1,21 +1,25 @@
 import vue from "@vitejs/plugin-vue";
 import path from "path";
-import ElementPlus from "unplugin-element-plus/vite";
+// import ElementPlus from "unplugin-element-plus/vite";
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 // import VitePluginElementPlus from "vite-plugin-element-plus";
 import { minifyHtml } from "vite-plugin-html";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 //@ts-ignore
 import virtual_plugin_for_mathjax_init from "./dist/virtual_plugin_for_mathjax_init.mjs";
 const id_of_virtual_mathjax_init = "virtual:mathjax_init-js";
-export default defineConfig(async ({ mode, command }) => {
-    console.log(mode, command);
+import { VitePWA } from "vite-plugin-pwa";
+export default defineConfig(() => {
+    // console.log(mode, command);
     // //@ts-ignore
     // const virtual_plugin_for_mathjax_init = ( //@ts-ignore
     //     await import("./dist/virtual_plugin_for_mathjax_init.mjs")
     // ).default;
     return {
-        // esbuild: { drop: ["console", "debugger"] },
+        esbuild: { drop: ["console", "debugger"] },
         build: {
             minify: "terser",
             target: "es2015",
@@ -25,14 +29,24 @@ export default defineConfig(async ({ mode, command }) => {
             },
         },
         plugins: [
+            AutoImport({
+                resolvers: [ElementPlusResolver()],
+            }),
+            Components({
+                resolvers: [ElementPlusResolver()],
+            }),
+            VitePWA({
+                registerType: "autoUpdate",
+                workbox: { globPatterns: ["*/*"] },
+            }),
             checker({ typescript: { root: path.resolve(__dirname) } }),
             //@ts-ignore
             virtual_plugin_for_mathjax_init({ id: id_of_virtual_mathjax_init }),
             checker({ vueTsc: true }),
 
-            ElementPlus({
-                // options
-            }),
+            // ElementPlus({
+            //     // options
+            // }),
             minifyHtml({ removeAttributeQuotes: false }),
             vue(),
             // VitePluginElementPlus({}),
