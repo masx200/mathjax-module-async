@@ -62,7 +62,7 @@
         "vite-plugin-html": "^2.1.0",
         "vite-plugin-pwa": "^0.12.2",
         "vue": "^3.2.37",
-        "vue-tsc": "^0.33.2-patch.1"
+        "vue-tsc": "^0.38.9"
     },
     "resolutions": {
         "debug": "4.3.2",
