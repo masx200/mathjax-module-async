@@ -12,20 +12,25 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import virtual_plugin_for_mathjax_init from "./dist/virtual_plugin_for_mathjax_init.mjs";
 const id_of_virtual_mathjax_init = "virtual:mathjax_init-js";
 import { VitePWA } from "vite-plugin-pwa";
-export default defineConfig(() => {
-    // console.log(mode, command);
+export default defineConfig(({ mode, command }) => {
+    console.log(mode, command);
     // //@ts-ignore
     // const virtual_plugin_for_mathjax_init = ( //@ts-ignore
     //     await import("./dist/virtual_plugin_for_mathjax_init.mjs")
     // ).default;
     return {
-        esbuild: { drop: ["console", "debugger"] },
+        esbuild: {
+            drop: "production" === mode ? ["console", "debugger"] : undefined,
+        },
         build: {
             minify: "terser",
             target: "es2015",
             terserOptions: {
                 output: { comments: false },
-                compress: { drop_console: true, drop_debugger: true },
+                compress:
+                    "production" === mode
+                        ? { drop_console: true, drop_debugger: true }
+                        : undefined,
             },
         },
         plugins: [
@@ -39,10 +44,13 @@ export default defineConfig(() => {
                 registerType: "autoUpdate",
                 workbox: { globPatterns: ["*/*"] },
             }),
-            checker({ typescript: { root: path.resolve(__dirname) } }),
+            checker({
+                vueTsc: true,
+                typescript: { root: path.resolve(__dirname) },
+            }),
             //@ts-ignore
             virtual_plugin_for_mathjax_init({ id: id_of_virtual_mathjax_init }),
-            checker({ vueTsc: true }),
+            // checker({ vueTsc: true }),
 
             // ElementPlus({
             //     // options

@@ -8,6 +8,7 @@ const app = createApp({
         return h(index);
     },
 });
+app.config.errorHandler = (e) => console.error(e);
 const rootele =
     document.getElementById("root") ||
     Object.assign(document.body.appendChild(document.createElement("div")), {

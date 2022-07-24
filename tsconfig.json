@@ -1,4 +1,5 @@
 {
+    "exclude": ["test/*.js", "test/*.vue"],
     // "exclude": [
     //     "node_modules",
     //     "virtual:mathjax_init.js"
@@ -8,10 +9,11 @@
         "*.ts",
         "*/*.ts",
         "lib/",
-        "test",
+        // "test",
         "test/*.ts"
     ],
     "compilerOptions": {
+        "jsx": "preserve",
         "noEmit": true,
         "types": ["vite/client"],
         "skipDefaultLibCheck": true,

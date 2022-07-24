@@ -1,10 +1,4 @@
-import {
-    defineComponent,
-    onMounted,
-    PropType,
-    ref,
-    watch,
-} from "@vue/runtime-core";
+import { defineComponent, PropType, ref, onMounted } from "vue";
 import { ElInput } from "element-plus";
 import throttle from "lodash/throttle.js";
 //@ts-ignore
@@ -26,22 +20,24 @@ export default defineComponent({
                     input.value.trim(),
                     language
                 );
+                console.log(input.value.trim());
+                console.log(mathhtml);
                 output.value = mathhtml;
             },
             500,
             {}
         );
-        watch(input, (input, oldin) => {
-            console.log(input);
-            if (input.trim() === oldin.trim()) {
-                return;
-            }
-            onchange();
-        });
+        // watch(input, (input, oldin) => {
+        //     console.log(input);
+        //     if (input.trim() === oldin.trim()) {
+        //         return;
+        //     }
+        //     onchange();
+        // });
         onMounted(() => {
             onchange();
         });
-        return { input, output };
+        return { input, output, onchange };
     },
     props: {
         language: {
