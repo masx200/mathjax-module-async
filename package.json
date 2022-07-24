@@ -44,7 +44,7 @@
         "element-plus": "^2.2.10",
         "html-minifier-terser": "^7.0.0-beta.0",
         "lodash": "^4.17.21",
-        "prettier": "^2.3.2",
+        "prettier": "^2.7.1",
         "regenerator-runtime": "^0.13.9",
         "rollup": "^2.77.0",
         "rollup-external-modules": "^2.0.0",
