@@ -73,4 +73,4 @@ https://github.com/masx200/mathjax-module-async/blob/master/lib/index.ts
 
 异步加载 `MathJax` 并返回 `MathJax`
 
-参数:`baseurl`:`mathjax`的起始网址,默认为`https://unpkg.com/mathjax@3.2.1/es5`
+参数:`baseurl`:`mathjax`的起始网址,默认为`https://unpkg.com/mathjax@3.2.2/es5`
