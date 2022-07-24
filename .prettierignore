@@ -1,3 +1,5 @@
 dist/index.cjs
 dist/index.js
 dist/
+test/auto-imports.d.ts
+test/components.d.ts

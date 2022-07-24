@@ -4,7 +4,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 // import VitePluginElementPlus from "vite-plugin-element-plus";
-import { minifyHtml } from "vite-plugin-html";
+import { createHtmlPlugin } from "vite-plugin-html";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
@@ -55,7 +55,14 @@ export default defineConfig(({ mode, command }) => {
             // ElementPlus({
             //     // options
             // }),
-            minifyHtml({ removeAttributeQuotes: false }),
+            createHtmlPlugin({
+                minify: {
+                    removeComments: true,
+                    removeAttributeQuotes: false,
+
+                    collapseWhitespace: true,
+                },
+            }),
             vue(),
             // VitePluginElementPlus({}),
         ],
