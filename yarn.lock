@@ -994,8 +994,8 @@
     "@types/lodash" "*"
 
 "@types/lodash@*", "@types/lodash@^4.14.182":
-  version "4.14.182"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.182.tgz#05301a4d5e62963227eaafe0ce04dd77c54ea5c2"
+  version "4.14.184"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.184.tgz#23f96cd2a21a28e106dc24d825d4aa966de7a9fe"
 
 "@types/node@*":
   version "18.6.5"
@@ -1035,49 +1035,41 @@
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.0.1.tgz#b6af8f782485374bbb5fe09edf067a845bf4caae"
 
-"@volar/code-gen@0.39.5":
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/@volar/code-gen/-/code-gen-0.39.5.tgz#971aad44cf9cfaf047c39dbc495ac061c66989da"
+"@volar/code-gen@0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@volar/code-gen/-/code-gen-0.40.1.tgz#30637162626bd2ea6e3c3c3cedab291494870c25"
   dependencies:
-    "@volar/source-map" "0.39.5"
+    "@volar/source-map" "0.40.1"
 
-"@volar/source-map@0.39.5":
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-0.39.5.tgz#0ee7308f718bc0fb280c22f3252968d04750fac6"
+"@volar/source-map@0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-0.40.1.tgz#9fcefb21ce0e0ca272f76129b6a98b6f08f4debb"
 
-"@volar/typescript-faster@0.39.5":
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/@volar/typescript-faster/-/typescript-faster-0.39.5.tgz#433b1d8caa981f6e5ff1ccc6fde4a1bdb9b25db8"
+"@volar/typescript-faster@0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@volar/typescript-faster/-/typescript-faster-0.40.1.tgz#99a37f0386934d971b71586ee0dcdd20b3537d90"
   dependencies:
     semver "^7.3.7"
 
-"@volar/vue-code-gen@0.39.5":
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/@volar/vue-code-gen/-/vue-code-gen-0.39.5.tgz#b16e52de668bd465e3b74a5785dda712979a1bcc"
+"@volar/vue-language-core@0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@volar/vue-language-core/-/vue-language-core-0.40.1.tgz#a11429b59351202af1a89167039a07b4bffbcefc"
   dependencies:
-    "@volar/code-gen" "0.39.5"
-    "@volar/source-map" "0.39.5"
+    "@volar/code-gen" "0.40.1"
+    "@volar/source-map" "0.40.1"
     "@vue/compiler-core" "^3.2.37"
     "@vue/compiler-dom" "^3.2.37"
-    "@vue/shared" "^3.2.37"
-
-"@volar/vue-language-core@0.39.5":
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/@volar/vue-language-core/-/vue-language-core-0.39.5.tgz#9f4d83c452f6d5a1a67b3cf2e95e0b456e86549c"
-  dependencies:
-    "@volar/code-gen" "0.39.5"
-    "@volar/source-map" "0.39.5"
-    "@volar/vue-code-gen" "0.39.5"
     "@vue/compiler-sfc" "^3.2.37"
     "@vue/reactivity" "^3.2.37"
+    "@vue/shared" "^3.2.37"
 
-"@volar/vue-typescript@0.39.5":
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/@volar/vue-typescript/-/vue-typescript-0.39.5.tgz#3c57befd4c996fef8df70d171ba531871f215535"
+"@volar/vue-typescript@0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@volar/vue-typescript/-/vue-typescript-0.40.1.tgz#5c6e9dd6a5a5e9ec47c90c70c98d2c97f1e8a20d"
   dependencies:
-    "@volar/code-gen" "0.39.5"
-    "@volar/typescript-faster" "0.39.5"
-    "@volar/vue-language-core" "0.39.5"
+    "@volar/code-gen" "0.40.1"
+    "@volar/typescript-faster" "0.40.1"
+    "@volar/vue-language-core" "0.40.1"
 
 "@vue/compiler-core@3.2.37", "@vue/compiler-core@^3.2.37":
   version "3.2.37"
@@ -2519,9 +2511,9 @@ rollup-plugin-ts@^3.0.2:
     ts-clone-node "^1.0.0"
     tslib "^2.4.0"
 
-rollup@^2.43.1, rollup@^2.75.6, rollup@^2.75.7, rollup@^2.77.0:
-  version "2.77.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.77.2.tgz#6b6075c55f9cc2040a5912e6e062151e42e2c4e3"
+"rollup@>=2.75.6 <2.77.0 || ~2.77.0", rollup@^2.43.1, rollup@^2.75.7, rollup@^2.77.0:
+  version "2.77.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.77.3.tgz#8f00418d3a2740036e15deb653bed1a90ee0cc12"
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2900,13 +2892,13 @@ vite-plugin-pwa@^0.12.3:
     workbox-window "^6.5.3"
 
 vite@^3.0.2:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.5.tgz#56b8d52e00bbbd5f21d02f0868dc613b3246ecc6"
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.9.tgz#45fac22c2a5290a970f23d66c1aef56a04be8a30"
   dependencies:
     esbuild "^0.14.47"
     postcss "^8.4.16"
     resolve "^1.22.1"
-    rollup "^2.75.6"
+    rollup ">=2.75.6 <2.77.0 || ~2.77.0"
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2951,12 +2943,12 @@ vue-demi@*:
   version "0.13.6"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.13.6.tgz#f9433cbd75e68a970dec066647f4ba6c08ced48f"
 
-vue-tsc@^0.39.0:
-  version "0.39.5"
-  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-0.39.5.tgz#0b75f5c3574b70fb448982702db2aa532a7fad6e"
+vue-tsc@^0.40.1:
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-0.40.1.tgz#96470c63d47d060178639d08ac18f1b1f8834d2c"
   dependencies:
-    "@volar/vue-language-core" "0.39.5"
-    "@volar/vue-typescript" "0.39.5"
+    "@volar/vue-language-core" "0.40.1"
+    "@volar/vue-typescript" "0.40.1"
 
 vue@^3.2.37:
   version "3.2.37"
