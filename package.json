@@ -60,7 +60,7 @@
         "vite-plugin-html": "^3.2.0",
         "vite-plugin-pwa": "^0.12.3",
         "vue": "^3.2.37",
-        "vue-tsc": "^0.39.0"
+        "vue-tsc": "^0.40.1"
     },
     "resolutions": {
         "html-minifier-terser": "^7.0.0-beta.0",
