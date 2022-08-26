@@ -1,5 +1,5 @@
 {
-    "version": "1.5.1",
+    "version": "1.5.2",
     "files": [
         "dist/index.d.ts",
         "dist/index.js",
@@ -24,8 +24,9 @@
         "prod": "npm run build1 && vite build --config vite.config.ts"
     },
     "keywords": [],
-    "author": "",
+    "author": "masx200",
     "license": "ISC",
+     "dependencies": {"regenerator-runtime": "^0.13.9"},
     "devDependencies": {
         "@babel/core": "^7.17.10",
         "@babel/preset-env": "^7.17.10",

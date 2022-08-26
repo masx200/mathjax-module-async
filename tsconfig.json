@@ -18,7 +18,7 @@
         "types": ["vite/client"],
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "inlineSourceMap": false,
         "pretty": true,
         "removeComments": true,
