@@ -2765,9 +2765,9 @@ unicode-property-aliases-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-2.0.0.tgz#0a36cb9a585c4f6abd51ad1deddb285c165297c8"
 
-unimport@^0.6.4:
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/unimport/-/unimport-0.6.5.tgz#f50fcfcba6ee4228d649670b4bed2f63cb03ef96"
+unimport@^0.6.7:
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/unimport/-/unimport-0.6.7.tgz#7b2e2063b88ee8ea363d2d751f7c82a6960beac3"
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
     escape-string-regexp "^5.0.0"
@@ -2778,7 +2778,7 @@ unimport@^0.6.4:
     pathe "^0.3.3"
     scule "^0.3.2"
     strip-literal "^0.4.0"
-    unplugin "^0.8.1"
+    unplugin "^0.9.0"
 
 unique-string@^2.0.0:
   version "2.0.0"
@@ -2790,16 +2790,16 @@ universalify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
 
-unplugin-auto-import@^0.10.0:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.10.3.tgz#79e42247977618008d87ae20a919c99dc97672cb"
+unplugin-auto-import@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.11.2.tgz#9b541f65e2800f298b13d73bca8e4eb333f94de7"
   dependencies:
     "@antfu/utils" "^0.5.2"
     "@rollup/pluginutils" "^4.2.1"
     local-pkg "^0.4.2"
     magic-string "^0.26.2"
-    unimport "^0.6.4"
-    unplugin "^0.8.0"
+    unimport "^0.6.7"
+    unplugin "^0.9.3"
 
 unplugin-vue-components@^0.22.4:
   version "0.22.4"
@@ -2816,18 +2816,9 @@ unplugin-vue-components@^0.22.4:
     resolve "^1.22.1"
     unplugin "^0.9.0"
 
-unplugin@^0.8.0, unplugin@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.8.1.tgz#4517b6a8ec3d944e838f9c346921d9777cd159e1"
-  dependencies:
-    acorn "^8.8.0"
-    chokidar "^3.5.3"
-    webpack-sources "^3.2.3"
-    webpack-virtual-modules "^0.4.4"
-
-unplugin@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.9.0.tgz#ebad287d61aa1b1f16de60feea74e8dd12224819"
+unplugin@^0.9.0, unplugin@^0.9.3:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.9.5.tgz#2e546c044e0631e699ebd6fb521eeb7bbcb8899f"
   dependencies:
     acorn "^8.8.0"
     chokidar "^3.5.3"
