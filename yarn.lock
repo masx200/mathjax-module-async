@@ -987,9 +987,9 @@
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
 
-"@types/html-minifier-terser@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz#4fc33a00c1d0c16987b1a20cf92d20614c55ac35"
+"@types/html-minifier-terser@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-7.0.0.tgz#a316cad70201de31bcc1a97cf8b73b26ae46ad65"
 
 "@types/lodash-es@^4.17.6":
   version "4.17.6"
@@ -1421,7 +1421,7 @@ commander@^8.0.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
 
-commander@^9.3.0:
+commander@^9.4.0:
   version "9.4.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
 
@@ -1594,7 +1594,7 @@ entities@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
 
-entities@^4.3.0:
+entities@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-4.3.1.tgz#c34062a94c865c322f9d67b4384e4169bcede6a4"
 
@@ -1937,16 +1937,16 @@ helpertypes@^0.0.18:
   resolved "https://registry.yarnpkg.com/helpertypes/-/helpertypes-0.0.18.tgz#fd2bf5d3351cc7d80f7876732361d3adba63e5b4"
 
 html-minifier-terser@^6.1.0, html-minifier-terser@^7.0.0-beta.0:
-  version "7.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/html-minifier-terser/-/html-minifier-terser-7.0.0-beta.0.tgz#78e274e62a3b890c069f769a8b26e4a02ece0de8"
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/html-minifier-terser/-/html-minifier-terser-7.0.0.tgz#e0ce8f10befeff89f29f19490f87213b85adaa4c"
   dependencies:
     camel-case "^4.1.2"
     clean-css "5.2.0"
-    commander "^9.3.0"
-    entities "^4.3.0"
+    commander "^9.4.0"
+    entities "^4.3.1"
     param-case "^3.0.4"
     relateurl "^0.2.7"
-    terser "^5.14.0"
+    terser "^5.14.2"
 
 idb@^7.0.1:
   version "7.0.2"
@@ -2680,7 +2680,7 @@ tempy@^0.6.0:
     type-fest "^0.16.0"
     unique-string "^2.0.0"
 
-terser@^5.0.0, terser@^5.14.0, terser@^5.14.2:
+terser@^5.0.0, terser@^5.14.2:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.15.0.tgz#e16967894eeba6e1091509ec83f0c60e179f2425"
   dependencies:
