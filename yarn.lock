@@ -2519,9 +2519,9 @@ rollup-plugin-ts@^3.0.2:
     ts-clone-node "^1.0.0"
     tslib "^2.4.0"
 
-rollup@^2.43.1, rollup@^2.75.6, rollup@^2.75.7, rollup@^2.77.0:
-  version "2.77.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.77.2.tgz#6b6075c55f9cc2040a5912e6e062151e42e2c4e3"
+"rollup@>=2.75.6 <2.77.0 || ~2.77.0", rollup@^2.43.1, rollup@^2.75.7, rollup@^2.77.0:
+  version "2.77.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.77.3.tgz#8f00418d3a2740036e15deb653bed1a90ee0cc12"
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2900,13 +2900,13 @@ vite-plugin-pwa@^0.12.3:
     workbox-window "^6.5.3"
 
 vite@^3.0.2:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.5.tgz#56b8d52e00bbbd5f21d02f0868dc613b3246ecc6"
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.9.tgz#45fac22c2a5290a970f23d66c1aef56a04be8a30"
   dependencies:
     esbuild "^0.14.47"
     postcss "^8.4.16"
     resolve "^1.22.1"
-    rollup "^2.75.6"
+    rollup ">=2.75.6 <2.77.0 || ~2.77.0"
   optionalDependencies:
     fsevents "~2.3.2"
 
