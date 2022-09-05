@@ -58,30 +58,7 @@ export async function loadmodules(
         },
     });
 
-    const proxymathjax = new Proxy(
-        {},
-        {
-            get(t, p, r) {
-                return Reflect.get(MathJax, p, MathJax);
-            },
-            set(t, p, v, r) {
-                return Reflect.set(MathJax, p, v, MathJax);
-            },
-            has(t, p) {
-                return Reflect.has(MathJax, p);
-            },
-            ownKeys(t) {
-                return Reflect.ownKeys(MathJax);
-            },
-            defineProperty(t, p, a) {
-                return Reflect.defineProperty(MathJax, p, a);
-            },
-
-            deleteProperty(t, p) {
-                return Reflect.deleteProperty(MathJax, p);
-            },
-        }
-    ) as Record<string, any>;
+    const proxymathjax = MathJax;
     // const likewindow = Object.fromEntries(
     //     equalglobals
     //         // Reflect.ownKeys(window)
