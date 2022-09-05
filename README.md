@@ -36,6 +36,9 @@
 
 https://github.com/mathjax/MathJax-src/issues/850
 
+https://github.com/masx200/MathJax-src
+
+https://github.com/masx200/MathJax
 # 在线演示
 
 https://mathjax-module-async.vercel.app/
