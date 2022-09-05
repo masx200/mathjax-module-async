@@ -2,8 +2,6 @@ import { preloadscript } from "./preloadscript";
 import { configscript } from "./configscript";
 import { mathjaxbase } from "./mathjaxurl";
 
-// export const mathjaxurl = mathjaxbase + "/" + `tex-mml-chtml.min.js`;
-//2281.69kb
 const mathjaxmodules = [
     "core",
     "input/asciimath",
@@ -31,4 +29,3 @@ export const scriptstoload: {
 function getrealmoduleurl(value: string): string {
     return mathjaxbase + "/" + value + ".js";
 }
-// console.log(scriptstoload);

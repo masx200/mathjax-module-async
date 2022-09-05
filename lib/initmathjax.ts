@@ -1,7 +1,7 @@
 import { loadmathjax } from "./loadmathjax.js";
-import { mathjaxbase } from "./mathjaxurl.js";
+import { mathjaxurl } from "./mathjaxurl.js";
 let MathJaxcache: Record<string, any> | undefined;
-export async function initmathjax({ baseurl = mathjaxbase } = {}): Promise<
+export async function initmathjax({ baseurl = mathjaxurl } = {}): Promise<
     Record<string, any>
 > {
     if (MathJaxcache) {

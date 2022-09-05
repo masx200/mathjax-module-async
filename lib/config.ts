@@ -1,4 +1,3 @@
-// import { mathjaxbase } from "./mathjaxurl.js";
 export function get_config(mathjaxbase: string) {
     const config = {
         startup: { typeset: false },
