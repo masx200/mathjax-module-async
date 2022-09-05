@@ -12,7 +12,7 @@ const dropcompressplugin = terser({
     ecma: 2015,
     //    sourcemap: true,
     toplevel: true,
-    output: { beautify: true, ecma: 5, comments: !1, ascii_only: !0 },
+    output: { beautify: false, ecma: 5, comments: !1, ascii_only: !0 },
     compress: {
         toplevel: true,
         unused: true,
