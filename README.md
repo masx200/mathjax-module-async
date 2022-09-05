@@ -32,7 +32,7 @@
 
 由于使用了`Proxy`,所以支持的浏览器必须支持 `ES2015`
 
-## 删除了`arguments.callee`,使用rollup打包
+## 删除了`arguments.callee`,使用 rollup 打包
 
 https://github.com/mathjax/MathJax-src/issues/850
 
