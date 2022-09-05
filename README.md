@@ -43,6 +43,8 @@ https://github.com/masx200/MathJax
 
 https://mathjax-module-async.vercel.app/
 
+https://mathjax-module-async-masx200.netlify.app/
+
 #### 安装教程
 
 ```powershell
