@@ -5,7 +5,10 @@ import browserlessFactory from "browserless";
 import { main } from "@masx200/serve-cli";
 import exitHook from "exit-hook";
 test("browser", async () => {
-    const server = main({ port: 4000, path: path.resolve(__dirname, "dist") });
+    const server = await main({
+        port: 4000,
+        path: path.resolve(__dirname, "dist"),
+    });
     const { createContext } = browserlessFactory({});
 
     // Now every time you call `createContext`
