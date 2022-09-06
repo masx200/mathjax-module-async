@@ -21,7 +21,8 @@
         "build1": "rollup -c rollup.config-1.mjs",
         "format": " npx prettier --write */*.html */*.js  *.json */*.ts *.md  */*.vue *.ts",
         "dev": "npm run build1 && vite --config vite.config.ts ",
-        "prod": "npm run build1 && vite build --config vite.config.ts"
+        "prod": "npm run build1 && vite build --config vite.config.ts",
+        "test": "vitest run"
     },
     "keywords": [],
     "author": "masx200",
@@ -30,6 +31,8 @@
         "regenerator-runtime": "^0.13.9"
     },
     "devDependencies": {
+        "vitest": "^0.23.1",
+        "happy-dom": "^6.0.4",
         "@babel/core": "^7.17.10",
         "@babel/preset-env": "^7.17.10",
         "@rollup/plugin-babel": "^5.3.1",
