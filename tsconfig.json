@@ -1,5 +1,5 @@
 {
-    "exclude": ["test", "test/*.vue"],
+    "exclude": ["test", "test/*.vue", "node_modules"],
 
     "include": ["test/shims.d.ts", "*.ts", "*/*.ts", "lib/"],
     "compilerOptions": {
