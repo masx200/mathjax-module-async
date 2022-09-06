@@ -13,14 +13,18 @@ test("latex", async () => {
     //@ts-ignore
     // assert.equal(html([result]), html([output]));
     //@ts-ignore
-    const aaa = html([result]);
+    const aaa = html([
+        result.replaceAll(`style="margin-left: 0px; margin-right: 0px;"`, ""),
+    ]);
     //@ts-ignore
-    const bbb = html([output]);
+    const bbb = html([
+        output.replaceAll(`style="margin-left: 0px; margin-right: 0px;"`, ""),
+    ]);
     // console.log(result, "\n", output);
     // assert.equal(result, output);
     // console.log(JSON.stringify(aaa, null, 4));
     // console.log(JSON.stringify(bbb, null, 4));
     // console.log(aaa, bbb);
     //@ts-ignore
-    assert.equal(aaa, bbb);
+    assert.deepEqual(aaa, bbb);
 });
