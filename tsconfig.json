@@ -1,17 +1,7 @@
 {
-    "exclude": ["test/*.js", "test/*.vue"],
-    // "exclude": [
-    //     "node_modules",
-    //     "virtual:mathjax_init.js"
-    // ],
-    "include": [
-        "test/shims.d.ts",
-        "*.ts",
-        "*/*.ts",
-        "lib/",
-        // "test",
-        "test/*.ts"
-    ],
+    "exclude": ["test", "test/*.vue"],
+
+    "include": ["test/shims.d.ts", "*.ts", "*/*.ts", "lib/"],
     "compilerOptions": {
         "jsx": "preserve",
         "noEmit": true,
