@@ -1,23 +1,23 @@
 import { test } from "vitest";
 import path from "path";
 //@ts-ignore
-import browserlessFactory from "browserless";
+import createBrowserless from "browserless";
 import { main } from "@masx200/serve-cli";
-import exitHook from "exit-hook";
-test("browser", async () => {
-    const server = await main({
-        port: 4000,
-        path: path.resolve(__dirname, "dist"),
-    });
-    const { createContext } = browserlessFactory({});
 
-    // Now every time you call `createContext`
-    // it will be create a browser context.
-    const browserless = await createContext();
+test(
+    "browser",
+    async () => {
+        const server = await main({
+            port: 4000,
+            path: path.resolve(__dirname, "dist"),
+        });
+        const browserless = createBrowserless({});
+        const ctx = await browserless.createContext();
+        const html = await ctx.html("http://localhost:4000");
+        console.log(html);
+        server.close();
 
-    const html = await browserless.html("http://localhost:4000");
-    console.log(html);
-    server.close();
-
-    exitHook(browserlessFactory.close());
-});
+        await browserless.close();
+    },
+    10 * 1000
+);
