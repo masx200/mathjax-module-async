@@ -38,7 +38,9 @@ async function start() {
     console.log(MathJax);
     // console.timeEnd('1')
     const { container1, container2, container3 } = createcontainers();
-
+    container1.id = "asciimath";
+    container2.id = "latex";
+    container3.id = "mathml";
     await Promise.all([
         rendermath(MathJax, asciimathinput, "asciimath").then(
             (html) => (container1.innerHTML = html)

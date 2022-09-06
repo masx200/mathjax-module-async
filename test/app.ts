@@ -1,4 +1,4 @@
-import { defineComponent } from "@vue/runtime-dom";
+import { defineComponent } from "vue";
 //@ts-ignore
 import { asciimathinput } from "./asciimathinput.js";
 //@ts-ignore

@@ -1,7 +1,7 @@
 import { createApp, h } from "vue";
 //@ts-ignore
 import { initmathjax } from "../lib/index";
-import index from "./index.vue";
+import index from "./app.vue";
 
 const app = createApp({
     render: () => {

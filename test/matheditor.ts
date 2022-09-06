@@ -40,6 +40,10 @@ export default defineComponent({
         return { input, output, onchange };
     },
     props: {
+        id: {
+            required: true,
+            type: String,
+        },
         language: {
             required: true,
             type: String as PropType<"latex" | "mathml" | "asciimath">,

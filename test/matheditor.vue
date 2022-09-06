@@ -11,7 +11,7 @@
         />
 
         <hr />
-        <div v-html="output" />
+        <div v-html="output" :id="id" />
         <hr />
     </div>
 </template>
