@@ -1,5 +1,6 @@
 import { test } from "vitest";
 import assert from "assert";
+//@ts-ignore
 import { initmathjax, rendermath } from "../dist/index.js";
 //@ts-ignore
 import { latexinput } from "./latexinput.js";
