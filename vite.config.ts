@@ -45,7 +45,7 @@ export default defineConfig(({ mode, command }) => {
                 workbox: { globPatterns: ["*/*"] },
             }),
             checker({
-                vueTsc: true,
+                // vueTsc: true,
                 typescript: { root: path.resolve(__dirname) },
             }),
             //@ts-ignore

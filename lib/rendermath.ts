@@ -20,10 +20,11 @@ export async function rendermath(
     mathjax.startup.document.addStyleSheet();
     const options = Object.assign({}, defaultoptions, opts);
 
-    const node :HTMLElement= await Reflect.apply(Reflect.get(MathJax, renderfun), MathJax, [
-        input.trim(),
-        options,
-    ]);
+    const node: HTMLElement = await Reflect.apply(
+        Reflect.get(MathJax, renderfun),
+        MathJax,
+        [input.trim(), options]
+    );
 
     container.appendChild(node);
 
