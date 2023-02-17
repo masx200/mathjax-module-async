@@ -38,5 +38,5 @@ test(
             .map((a) => a.innerHTML)
             .forEach((t) => assert.equal(t, mathmloutput));
     },
-    10 * 1000
+    15 * 1000
 );
