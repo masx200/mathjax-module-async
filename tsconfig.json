@@ -3,6 +3,7 @@
 
     "include": ["test/shims.d.ts", "*.ts", "*/*.ts", "lib/"],
     "compilerOptions": {
+        "ignoreDeprecations": "5.0",
         "jsx": "preserve",
         "noEmit": true,
         "types": ["vite/client"],
