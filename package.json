@@ -54,7 +54,7 @@
         "linkedom": "^0.14.12",
         "lodash": "^4.17.21",
         "prettier": "^2.7.1",
-        "puppeteer": "^19.0.0",
+        "puppeteer": "^20.6.0",
         "regenerator-runtime": "^0.13.9",
         "rollup": "^2.77.0",
         "rollup-external-modules": "^2.0.0",
